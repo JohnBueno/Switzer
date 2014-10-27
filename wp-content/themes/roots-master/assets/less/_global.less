@@ -1,21 +1,33 @@
-
+body{
+	font-family: @font-family-sans-serif;
+}
 
 @media (min-width: @screen-sm-min)  {}
 @media (min-width: @screen-md-min)  {
 
-	// .cbp-bicontrols {
-	// 	position: fixed;
-	// 	width: 300px;
-	// 	height: 100px;
-	// 	margin: -50px 0 0 -150px;
-	// 	top: 50%;
-	// 	left: 50%;
-	// }
+	.logo {
+			position: fixed;
+			width: 600px;
+			height: 200px;
+			margin: -50px 0 0 -300px;
+			top: 50%;
+			left: 50%;
+	}
 
 	.navbar{
 		min-height: 0;
+		text-transform: uppercase;
 	}
 	
+	.navbar-brand{
+		max-width: 220px;
+	}
+
+	.navbar-toggle{
+		color: #fff;
+		border: none;
+	}
+
 	.dropdown-menu{
 		min-width: 180px;
 	}
@@ -34,7 +46,7 @@
 		position: relative;
 	}
 	.navbar-default{
-		//background-color: transparent;
+		background-color: #333;
 		border-bottom: none;
 	}
 	.navbar-header{

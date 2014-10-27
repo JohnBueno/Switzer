@@ -12,7 +12,7 @@ Template Name: Home Template
 	<li><img src="<?php bloginfo('template_url'); ?>/assets/img/home-bg-5.jpg" alt="image05"/></li>
 </ul>
 
-<div class="logo col-md-8 col-md-offset-2 text-center">
+<div class="logo">
 	<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/assets/img/home-logo.png" alt="">
 </div>
 
