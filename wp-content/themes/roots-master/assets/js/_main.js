@@ -33,18 +33,18 @@
                     $(this).find('.dropdown-menu').first().stop(true, true).slideUp(200);
                 });
                 
-                // $slideshow = $( '#cbp-bislideshow' );
-                // console.log($slideshow);
-                // $slideshow.imagesLoaded(function(){
-                //     console.log('test');
-                // });
-                cbpBGSlideshow.init();
             }
         },
         // Home page
         home: {
             init: function() {
                 // JavaScript to be fired on the home page
+                $slideshow = $( '#cbp-bislideshow' );
+                $slideshow.imagesLoaded(function(){
+                    $('body').addClass('animate');
+                });
+                
+                cbpBGSlideshow.init();
                 
             }
         },

@@ -16,4 +16,7 @@ Template Name: Home Template
 	<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/assets/img/home-logo.png" alt="">
 </div>
 
+<div class="experience text-center">
+	<h4>EXPERIENCE THE VISION</h4>
+</div>
 
