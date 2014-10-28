@@ -5,9 +5,14 @@ body{
 @media (min-width: @screen-sm-min)  {}
 @media (min-width: @screen-md-min)  {
 
+	.main .col-md-4{
+		background-color: #fff;
+	}
+
 	.navbar{
 		min-height: 0;
 		text-transform: uppercase;
+		margin-bottom: 0;
 	}
 	
 	.navbar-brand{
@@ -32,11 +37,14 @@ body{
 		right: 0;
 	}
 	
+	.home .navbar-brand{
+		top: -100px;
+		opacity: 0;
+	}
+
 	.navbar-brand{
 		position: absolute;
 		left: 0;
-		top: -100px;
-		opacity: 0;
 	}
 
 	.animate .navbar-brand{
