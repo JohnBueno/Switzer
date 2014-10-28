@@ -33,6 +33,7 @@
                     $(this).find('.dropdown-menu').first().stop(true, true).slideUp(200);
                 });
                 
+                cbpBGSlideshow.init();
             }
         },
         // Home page
@@ -44,7 +45,7 @@
                     $('body').addClass('animate');
                 });
                 
-                cbpBGSlideshow.init();
+                
                 
             }
         },
