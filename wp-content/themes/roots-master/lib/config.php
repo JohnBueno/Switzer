@@ -55,7 +55,9 @@ function roots_display_sidebar() {
      */
     array(
       'template-custom.php',
-      'template-about.php'
+      'template-about.php',
+      'template-team.php'
+
     )
   );
 

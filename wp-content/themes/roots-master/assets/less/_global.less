@@ -23,17 +23,27 @@ ul.siblings{
 		margin-bottom: 80px;
 	}
 
+	.team-container{
+		padding-right: 0;
+		padding-left: 0;
+	}
+	.team-imgs div{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	
 	.single-col:after{
+		
 		background: #fff;
 		background: rgba(255, 255, 255, 0.85);
 		position: fixed;
 		top: 0;
+		width: 313px;
 		content: "";
 		display: block;
 		height: 5000px;
-		width: 343px;
 		z-index: -1;
-		margin-left: @grid-gutter-width* -1;
+		margin-left: (@grid-gutter-width / 2)* -1;
 	}
 
 	.navbar{
@@ -42,8 +52,6 @@ ul.siblings{
 		margin-bottom: 0;
 	}
 	
-	
-
 	.navbar-toggle{
 		color: #fff;
 		border: none;
@@ -171,7 +179,7 @@ ul.siblings{
 }
 @media (min-width: @screen-lg-min)  {
 	.single-col:after{
-		width: 402px;
+		width: 380px;
 	}
     
 }
