@@ -58,6 +58,7 @@ function roots_display_sidebar() {
       'template-custom.php',
       'template-about.php',
       'template-team.php',
+      'template-portfolio.php'
     )
   );
 
