@@ -8,7 +8,7 @@ Template Name: Team Template
 </ul>
 
 	<?php while (have_posts()) : the_post(); ?>
-		<div class="col-md-4 col-md-offset-6 single-col">
+		<div class="col-md-4 col-md-offset-6 single-col fixed-col">
   			<?php get_template_part('templates/page', 'header'); ?>
   		</div>
 

@@ -6,17 +6,23 @@
 <div class="col-md-6 col-md-offset-4 team-col fixed-col">
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class(); ?>>
-    <img class="img-responsive" src="<?php bloginfo('template_url'); ?>/assets/img/team-fpo-lg.jpg" alt="<?php the_title(); ?>">
-    <header>
-      <h4 class="entry-title"><?php the_title(); ?></h4>
-    </header>
-    <div class="entry-content">
-      <?php the_content(); ?>
+    <div class="row">
+    	<div class="col-sm-12">
+    		<a class="team-back pull-right" href="<?php bloginfo('url'); ?>/about/meet-our-team">
+    			<i class="fa fa-times"></i>
+    		</a>
+    	</div>
     </div>
-    <footer>
-      <?php wp_link_pages(array('before' => '<nav class="page-nav"><p>' . __('Pages:', 'roots'), 'after' => '</p></nav>')); ?>
-    </footer>
-    <?php comments_template('/templates/comments.php'); ?>
+    <div class="row team-img-lg">
+    	<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/assets/img/team-fpo-lg.jpg" alt="<?php the_title(); ?>">
+    </div>
+
+	    <header>
+	      <h4 class="entry-title"><?php the_title(); ?></h4>
+	    </header>
+	    <div class="entry-content">
+	      <?php the_content(); ?>
+	    </div>
   </article>
 <?php endwhile; ?>
 </div>
