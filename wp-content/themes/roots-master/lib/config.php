@@ -47,7 +47,8 @@ function roots_display_sidebar() {
      */
     array(
       'is_404',
-      'is_front_page'
+      'is_front_page',
+      'is_single'
     ),
     /**
      * Page template checks (via is_page_template())
@@ -56,8 +57,7 @@ function roots_display_sidebar() {
     array(
       'template-custom.php',
       'template-about.php',
-      'template-team.php'
-
+      'template-team.php',
     )
   );
 
