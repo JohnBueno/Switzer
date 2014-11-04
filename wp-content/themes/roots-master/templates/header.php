@@ -7,7 +7,11 @@
         <i class="fa fa-bars"></i>
       </button>
       <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
+        <?php  if (is_page_template( 'template-portfolio.php' )): ?>
+          <img class="img-responsive" src="<?php bloginfo('template_url'); ?>/assets/img/hdr-logo-dark.png" alt="<?php bloginfo('name'); ?>">
+        <?php else: ?>
           <img class="img-responsive" src="<?php bloginfo('template_url'); ?>/assets/img/hdr-logo.png" alt="<?php bloginfo('name'); ?>">
+        <?php endif; ?>
       </a>
     </div>
     <nav class="collapse navbar-collapse navbar-right" role="navigation">
