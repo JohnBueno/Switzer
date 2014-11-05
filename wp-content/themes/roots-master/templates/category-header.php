@@ -19,7 +19,7 @@
 				</div>	
 				<div class="dropdown portfolio-dropdown">
 					<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-						Dropdown
+						View a Project Category
 						<span class="caret pull-right"></span>
 					</button>
 					<ul class="dropdown-menu" role="menu" aria-labelledby="Categories">
