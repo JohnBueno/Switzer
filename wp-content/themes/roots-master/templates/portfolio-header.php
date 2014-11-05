@@ -1,5 +1,9 @@
-<div class="page-header col-md-4 col-md-offset-6">
-	<h4>
-    	<?php echo roots_title(); ?>
-  	</h4>
-</div>
+<!-- <div class="col-md-4 col-md-offset-6">
+	<div class="page-header">
+		<div class="breadcrumbs">
+	    	<?php echo roots_title(); ?>
+	  	</div>
+	  	
+	</div>	
+</div> -->
+
