@@ -6,6 +6,7 @@
 	);
  	$categories = get_categories($args);
 ?>
+
 <div class="portfolio-fixed"> 
 	<div class="container">
 		<div class="row">
