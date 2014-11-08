@@ -6,16 +6,23 @@ body{
 	max-width: 220px;
 }
 
-ul{
+.content ul{
 	padding-left: 20px;
+	font-size: 12px;
 }
 
 ul.siblings{
-	margin-top: 80px;
+	margin-top: 60px;
 	list-style-type: none;
 	padding-left: 0;
-
+	font-size: 14px;
 }
+
+a:hover{
+	text-decoration: none;
+}
+
+
 
 
 @media (min-width: @screen-sm-min)  {
@@ -29,6 +36,7 @@ ul.siblings{
 }
 @media (min-width: @screen-md-min)  {
 	
+
 	.portfolio-fixed{
 		position:fixed; 
 		width:100%;
@@ -40,6 +48,10 @@ ul.siblings{
 	
 	.portfolio-categories .category-thumbs{
 		margin-top: 150px;
+	}
+
+	.page-header{
+		margin-top: (@line-height-computed * 1);
 	}
 
 	.portfolio-categories .page-header{
@@ -59,7 +71,7 @@ ul.siblings{
 			text-align: left;
 			border-radius: 0;
 			border: none;
-			background: #e4e4e4;
+			background: @gray;
 			padding: 10px 20px;
 			.caret{
 				margin-top: 8px;
@@ -71,7 +83,7 @@ ul.siblings{
 			padding: 0;
 			border-radius: 0;
 			border: none;
-			background: #686767;
+			background: @gray-dark;
 			font-size: 14px;
 			a{
 				color: #fff;
@@ -79,7 +91,7 @@ ul.siblings{
 				padding: 5px 20px;
 			}
 			a:hover{
-				background: #e4e4e4;
+				background: @gray;
 				color:#000;
 			}
 			
@@ -93,11 +105,19 @@ ul.siblings{
 			left: @grid-gutter-width;
 			color: #fff;
 		}
-		img{
-			//.opacity(0.5);
-		}
+		
 		.bg{
 			background: @brand-primary;
+			img{
+				.opacity(1);
+				.transition(opacity 0.4s ease);
+			}
+		}
+	}
+
+	.portfolio-categories .col-md-3{
+		.bg a:hover img{
+			.opacity(0.5);
 		}
 	}
 
@@ -172,6 +192,36 @@ ul.siblings{
 		margin-left: (@grid-gutter-width / 2)* -1;
 	}
 
+	.page.fixed-col{
+		padding-bottom: 50px;
+	}
+
+	.single-portfolio{
+		background: rgba(255, 255, 255, 0.85);
+	}
+
+	.single-portfolio .breadcrumbs{
+		margin-bottom: 0px;
+	}
+
+	.single-portfolio h3 small{
+		cursor: pointer;
+		font-size: 12px;
+		padding: 7px 0;
+		color:#000;
+		i{
+			padding: 1px 2px;
+			text-align: center;
+			background: @gray-dark;
+			color: #fff;
+		}
+	}
+
+	.single-portfolio h5{
+		color: #000;
+		margin-bottom: 3px;
+	}
+
 	.navbar{
 		min-height: 0;
 		text-transform: uppercase;
@@ -204,6 +254,7 @@ ul.siblings{
 	.navbar-brand{
 		position: absolute;
 		left: 0;
+		padding-top: @navbar-padding-vertical - 3px;
 	}
 
 	.animate .navbar-brand{
