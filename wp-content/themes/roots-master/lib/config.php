@@ -49,7 +49,8 @@ function roots_display_sidebar() {
       'is_404',
       'is_front_page',
       'is_single',
-      'is_category'
+      'is_category',
+      'is_page'
     ),
     /**
      * Page template checks (via is_page_template())
@@ -59,7 +60,7 @@ function roots_display_sidebar() {
       'template-custom.php',
       'template-about.php',
       'template-team.php',
-      'template-portfolio.php'
+      'template-portfolio.php',
     )
   );
 
