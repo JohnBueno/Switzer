@@ -6,12 +6,15 @@
         </div>
     </div>
     <header>
-    <h3>
-        <?php the_title(); ?>
-        <small class="pull-right">Expand <i class="fa fa-plus"></i></small>
+        <h3>
+            <?php the_title(); ?>
+            <a id="expand-portfolio" href="#">
+                <small class="pull-right">Expand <i class="fa fa-plus"></i></small>
+            </a>
         </h3>
     </header>
     <div class="entry-content">
+        <div class="dropdown">
         <?php the_content(); ?>
         <div class="row">
             <div class="col-md-6">
@@ -36,15 +39,18 @@
         <div class="row">
             <div class="col-md-6">
                 <p>
-                    
                     <a href="#">
                         <strong>
                             <i class="fa fa-caret-right"></i> <small>View Full Gallery</small>
                         </strong>
                     </a>
+
                     <br/>
-                    
-                    <a href="<?php echo(get_category_link()); ?>">
+                    <?php 
+                        $cats = get_the_category();
+                        $catId = $cats[0]->cat_ID;
+                    ?>
+                    <a href="<?php echo get_category_link($catId); ?>">
                         <strong><i class="fa fa-caret-right"></i> <small>View Corporate Projects</small></strong>
                     </a>
                 </p>
@@ -57,7 +63,7 @@
                 </p>
             </div>
         </div>
-
+        </div>
     </div>
 
 </article>

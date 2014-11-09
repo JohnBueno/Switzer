@@ -32,7 +32,21 @@
                 $('.dropdown').on('hide.bs.dropdown', function(e) {
                     $(this).find('.dropdown-menu').first().stop(true, true).slideUp(200);
                 });
-                
+
+                $('#expand-portfolio').on('click', function(e) {
+                    if ($(this).hasClass('open')) {
+                        $(this).removeClass('open');
+                        $('.entry-content .dropdown').removeClass('fade-in');
+                        $('.entry-content').slideUp(200);
+                    } else {
+                        console.log('open');
+                        $(this).addClass('open');
+                        $('.entry-content').slideDown(200, function() {
+                            $(this).find('.dropdown').addClass('fade-in');
+                        });
+                    }
+                });
+
                 cbpBGSlideshow.init();
             }
         },
@@ -40,13 +54,13 @@
         home: {
             init: function() {
                 // JavaScript to be fired on the home page
-                $slideshow = $( '#cbp-bislideshow' );
-                $slideshow.imagesLoaded(function(){
+                $slideshow = $('#cbp-bislideshow');
+                $slideshow.imagesLoaded(function() {
                     $('body').addClass('animate');
                 });
-                
-                
-                
+
+
+
             }
         },
         // About us page, note the change from about-us to about_us.

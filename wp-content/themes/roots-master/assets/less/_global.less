@@ -216,10 +216,49 @@ a:hover{
 			color: #fff;
 		}
 	}
-
+	
+	.single-portfolio{
+		color: #000;
+		a{
+			color: #000;
+		}
+		a:hover{
+			color: @brand-primary;
+		}
+	}
 	.single-portfolio h5{
 		color: #000;
 		margin-bottom: 3px;
+	}
+	
+	.single-portfolio .entry-content{
+		display: none;
+	}
+
+	.single-portfolio .entry-content .dropdown{
+		.opacity(0);
+		.transition(opacity 2.0s ease);
+	}
+	
+	.single-portfolio .entry-content .dropdown.fade-in{
+		.opacity(1);
+	}
+
+	.portfolio-nav{
+		position: fixed;
+		top:50%;
+		padding: 20px;
+		color: #fff !important;
+		font-size: 40px;
+		background: rgba(0, 0, 0, 0.5);
+	}
+	
+	.portfolio-prev{
+		left: 0;
+	}
+
+	.portfolio-next{
+		right: 0;
 	}
 
 	.navbar{
