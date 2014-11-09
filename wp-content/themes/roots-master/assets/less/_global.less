@@ -36,6 +36,15 @@ a:hover{
 }
 @media (min-width: @screen-md-min)  {
 	
+	.shadow{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 431px;
+		z-index: -1;
+		background: url(../img/shadow.png);
+	}
 
 	.portfolio-fixed{
 		position:fixed; 
@@ -52,6 +61,7 @@ a:hover{
 
 	.page-header{
 		margin-top: (@line-height-computed * 1);
+		border-bottom: none;
 	}
 
 	.portfolio-categories .page-header{
@@ -243,21 +253,26 @@ a:hover{
 	.single-portfolio .entry-content .dropdown.fade-in{
 		.opacity(1);
 	}
-
-	.portfolio-nav{
-		position: fixed;
-		top:50%;
-		padding: 20px;
-		color: #fff !important;
-		font-size: 40px;
-		background: rgba(0, 0, 0, 0.5);
-	}
 	
-	.portfolio-prev{
+	.cbp-bipause{
+		display: none;
+	}
+	.cbp-biprev, .cbp-binext{
+		cursor: pointer;
+		font-size: 40px;
+		top:50%;
+		margin-top: -30px;
+		color: #fff;
+		position: fixed;
+		background: rgba(0, 0, 0, 0.70);
+	}
+
+	.cbp-biprev{
+		padding: 15px 20px 15px 15px;
 		left: 0;
 	}
-
-	.portfolio-next{
+	.cbp-binext{
+		padding: 15px 15px 15px 20px;
 		right: 0;
 	}
 
