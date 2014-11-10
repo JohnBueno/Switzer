@@ -34,6 +34,7 @@
                 });
 
                 $('#expand-portfolio').on('click', function(e) {
+                    e.preventDefault();
                     if ($(this).hasClass('open')) {
                         $(this).removeClass('open');
                         $('.entry-content .dropdown').removeClass('fade-in');
@@ -49,7 +50,10 @@
                 cbpBGSlideshow.init();
 
                 $(".boxer").boxer({
-                    mobile:true
+                    mobile:true,
+                    callback: function(){
+
+                    }
                 });
             }
         },
