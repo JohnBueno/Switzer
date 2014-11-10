@@ -39,7 +39,6 @@
                         $('.entry-content .dropdown').removeClass('fade-in');
                         $('.entry-content').slideUp(200);
                     } else {
-                        console.log('open');
                         $(this).addClass('open');
                         $('.entry-content').slideDown(200, function() {
                             $(this).find('.dropdown').addClass('fade-in');
@@ -48,6 +47,10 @@
                 });
 
                 cbpBGSlideshow.init();
+
+                $(".boxer").boxer({
+                    mobile:true
+                });
             }
         },
         // Home page
@@ -61,12 +64,6 @@
 
 
 
-            }
-        },
-        // About us page, note the change from about-us to about_us.
-        about_us: {
-            init: function() {
-                // JavaScript to be fired on the about us page
             }
         }
     };

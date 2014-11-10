@@ -19,6 +19,7 @@ module.exports = function(grunt) {
     'assets/vendor/bootstrap/js/tab.js',
     'assets/vendor/bootstrap/js/affix.js',
     'assets/vendor/imagesloaded/imagesloaded.pkgd.js',
+    'assets/vendor/Boxer/jquery.fs.boxer.js',
     'assets/js/plugins/*.js',
     'assets/js/_*.js'
   ];

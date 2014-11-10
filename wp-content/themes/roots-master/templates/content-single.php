@@ -36,7 +36,7 @@
                 <p><?php the_field('status');?></p>
             </div>
         </div>
-        <div class="row">
+        <div class="row links">
             <div class="col-md-6">
                 <p>
                     <a href="#">
@@ -44,6 +44,11 @@
                             <i class="fa fa-caret-right"></i> <small>View Full Gallery</small>
                         </strong>
                     </a>
+
+                    <span class="boxer" data-gallery="gallery"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/assets/img/home-bg-1.jpg"></span>
+                    <span data-gallery="gallery"><img class="hide img-responsive" src="<?php bloginfo('template_url'); ?>/assets/img/home-bg-1.jpg"></span>
+                    <span data-gallery="gallery"><img class="hide img-responsive" src="<?php bloginfo('template_url'); ?>/assets/img/home-bg-1.jpg"></span>
+                    <span data-gallery="gallery"><img class="hide img-responsive" src="<?php bloginfo('template_url'); ?>/assets/img/home-bg-1.jpg"></span>
 
                     <br/>
                     <?php 
