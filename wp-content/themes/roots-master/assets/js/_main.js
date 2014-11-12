@@ -36,11 +36,14 @@
                 $('#expand-portfolio').on('click', function(e) {
                     e.preventDefault();
                     if ($(this).hasClass('open')) {
+                        $(this).html('<small class="pull-right">Expand <i class="fa fa-plus"></i></small>');
                         $(this).removeClass('open');
                         $('.entry-content .dropdown').removeClass('fade-in');
                         $('.entry-content').slideUp(200);
                     } else {
                         $(this).addClass('open');
+                        $(this).html('<small class="pull-right">Close <i class="fa fa-minus"></i></small>');
+
                         $('.entry-content').slideDown(200, function() {
                             $(this).find('.dropdown').addClass('fade-in');
                         });
@@ -50,8 +53,8 @@
                 cbpBGSlideshow.init();
 
                 $(".boxer").boxer({
-                    mobile:true,
-                    callback: function(){
+                    mobile: true,
+                    callback: function() {
 
                     }
                 });
@@ -63,7 +66,9 @@
                 // JavaScript to be fired on the home page
                 $slideshow = $('#cbp-bislideshow');
                 $slideshow.imagesLoaded(function() {
-                    $('body').addClass('animate');
+                    $("body").addClass("animate").delay(5000).queue(function() {
+                        $(this).removeClass("animate").addClass('finish-animate').dequeue();
+                    });
                 });
 
 

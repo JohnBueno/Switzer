@@ -114,6 +114,7 @@ a:hover{
 			bottom: 5px;
 			left: @grid-gutter-width;
 			color: #fff;
+			text-transform: uppercase;
 		}
 		
 		.bg{
@@ -315,11 +316,11 @@ a:hover{
 		padding-top: @navbar-padding-vertical - 3px;
 	}
 
-	.animate .navbar-brand{
+	.finish-animate .navbar-brand{
 		.opacity(1);
 		top: 0px;
 		.transition(opacity 2.0s ease);
-		.transition(top 1.8s ease);
+		.transition(top 2.5s ease);
 	}
 
 	.experience{
@@ -327,33 +328,34 @@ a:hover{
 		position: fixed;
 		height: 30px;
 		width: 220px;
-		margin: -50px 0 0 -110px;
+		margin: -50px 0 0 0px;
 		bottom: -50px;
-		left: 50%;
+		left: 50px;
 		border-top: 1px solid #fff;
 	}
 
-	.animate .experience{
+	.finish-animate .experience{
 		bottom: 5%;
-		.transition(bottom 1.5s ease);
+		.transition(bottom 2.8s ease);
 	}
 
 	.logo {
-		opacity: 0;
+		.opacity(0);
+		.transition(opacity 2.0s ease);
 		position: fixed;
-		width: 600px;
+		width: 800px;
 		height: 200px;
-		margin: -50px 0 0 -300px;
+		margin: -80px 0 0 -400px;
 		top: 50%;
 		left: 50%;
 	}
 
 	.animate .logo{
-		.opacity(1);
-		.transition(opacity 1.8s ease);
+		.opacity(1);	
 	}
 
 	.navbar .container{
+		letter-spacing: 0.5px;
 		position: relative;
 	}
 
@@ -408,10 +410,11 @@ a:hover{
 		left: 210px; 
 		width: 210px; 
 		margin-right: -210px;
+		margin-bottom: 10px;
 	}
 	
 	.navbar-nav .dropdown-menu > li > a, .navbar-nav .open .dropdown-menu > li > a{
-		padding: 5px 15px 5px 13px !important;
+		padding: 0px 15px 0px 13px !important;
 		color: #777777;
 	}
 

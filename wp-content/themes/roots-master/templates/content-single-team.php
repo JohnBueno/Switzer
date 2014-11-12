@@ -28,10 +28,11 @@
 	      	</a>
 	      </p>
 	      <p>
-				<?php // next_post_link( $format, $link, $in_same_term = false, $excluded_terms = '' ); ?>
-				<!-- <a href="<?php next_post_link( $format, $link, $in_same_term = false, $excluded_terms = '', $taxonomy = 'category' ); ?>">
-	      		<strong><i class="fa fa-caret-right"></i> View Next Team Member</strong>
-	      	</a> -->
+				
+                <?php c2c_next_or_loop_post_link($format='<strong><i class="fa fa-caret-right"></i> %link</strong>', $link='View Next Team Member'); ?><br/>
+<!-- 				<a href="<?php next_post_link( $format, $link, $in_same_term = false, $excluded_terms = '', $taxonomy = 'category' ); ?>">
+	      		   <strong><i class="fa fa-caret-right"></i> View Next Team Member</strong>
+	      	    </a> -->
 	      </p>
 	    </div>
   </article>
