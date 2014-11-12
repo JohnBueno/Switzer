@@ -9,7 +9,9 @@ Template Name: Team Template
 <div class="shadow"></div>
 	<?php while (have_posts()) : the_post(); ?>
 		<div class="col-md-4 col-md-offset-6 single-col fixed-col">
-  			<?php get_template_part('templates/page', 'header'); ?>
+            <div class="extra-pad">
+  			   <?php get_template_part('templates/page', 'header'); ?>
+            </div>
   		</div>
 
 		<div class="team-container col-md-6 col-md-offset-4">
@@ -18,12 +20,14 @@ Template Name: Team Template
   		
 
 		<div class="col-md-4 col-md-offset-6">
-	  		<ul class="siblings">
-			  <?php
-			  $parent = $post->post_parent;
-			  wp_list_pages("title_li=&child_of=$parent&show_date=modified
-			  &date_format=$date_format"); ?>
-			</ul>
+            <div class="extra-pad">
+    	  		<ul class="siblings">
+    			  <?php
+    			  $parent = $post->post_parent;
+    			  wp_list_pages("title_li=&child_of=$parent&show_date=modified
+    			  &date_format=$date_format"); ?>
+    			</ul>
+            <div class="extra-pad">
 		</div>
 	<?php endwhile; ?>
 </div>

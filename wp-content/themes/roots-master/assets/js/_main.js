@@ -42,7 +42,7 @@
                         $('.entry-content').slideUp(200);
                     } else {
                         $(this).addClass('open');
-                        $(this).html('<small class="pull-right">Close <i class="fa fa-minus"></i></small>');
+                        $(this).html('<small class="pull-right">Collapse <i class="fa fa-minus"></i></small>');
 
                         $('.entry-content').slideDown(200, function() {
                             $(this).find('.dropdown').addClass('fade-in');
@@ -66,7 +66,7 @@
                 // JavaScript to be fired on the home page
                 $slideshow = $('#cbp-bislideshow');
                 $slideshow.imagesLoaded(function() {
-                    $("body").addClass("animate").delay(5000).queue(function() {
+                    $("body").addClass("animate").delay(2000).queue(function() {
                         $(this).removeClass("animate").addClass('finish-animate').dequeue();
                     });
                 });
