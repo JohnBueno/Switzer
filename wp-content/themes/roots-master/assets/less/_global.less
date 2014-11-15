@@ -22,39 +22,20 @@ a:focus{
 	outline: none;
 }
 
+.experience{
+	display: none;
+}
 
+.logo{
+	position: fixed;
+	width: 800px;
+	height: 200px;
+	margin: -80px 0 0 -400px;
+	top: 50%;
+	left: 50%;
+}
 
 @media (min-width: @screen-sm-min)  {
-	.experience{
-		color: #fff;
-		position: fixed;
-		height: 30px;
-		width: 220px;
-		margin: -50px 0 0 0px;
-		bottom: -50px;
-		left: 15px;
-		border-top: 1px solid #fff;
-	}
-
-	.finish-animate .experience{
-		bottom: 15px;
-		.transition(bottom 2.8s ease);
-	}
-
-	.logo {
-		.opacity(0);
-		.transition(opacity 2.0s ease);
-		position: fixed;
-		width: 800px;
-		height: 200px;
-		margin: -80px 0 0 -400px;
-		top: 50%;
-		left: 50%;
-	}
-
-	.animate .logo{
-		.opacity(1);	
-	}
 	.logged-in .navbar-fixed-top{
 		top: 32px;
 	}
@@ -312,6 +293,32 @@ a:focus{
 	.cbp-binext{
 		padding: 15px 15px 15px 20px;
 		right: 0;
+	}
+
+	.experience{
+		display: block;
+		color: #fff;
+		position: fixed;
+		height: 30px;
+		width: 220px;
+		margin: -50px 0 0 0px;
+		bottom: -50px;
+		left: 15px;
+		border-top: 1px solid #fff;
+	}
+
+	.finish-animate .experience{
+		bottom: 15px;
+		.transition(bottom 2.8s ease);
+	}
+
+	.logo {
+		.opacity(0);
+		.transition(opacity 2.0s ease);
+	}
+
+	.animate .logo{
+		.opacity(1);	
 	}
 
 }
