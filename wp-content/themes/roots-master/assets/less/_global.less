@@ -4,14 +4,14 @@ body{
 
 .content ul{
 	padding-left: 20px;
-	font-size: 12px;
+	font-size: @font-size-small;
 }
 
 ul.siblings{
 	margin-top: 60px;
 	list-style-type: none;
 	padding-left: 0;
-	font-size: 14px;
+	font-size: @font-size-base;
 }
 
 a:hover{
@@ -35,6 +35,64 @@ a:focus{
 	left: 50%;
 }
 
+.fixed-col:after{
+	background: #fff;
+	background: rgba(255, 255, 255, 0.85);
+	position: fixed;
+	top: 0;
+	content: "";
+	display: block;
+	height: 5000px;
+	z-index: -1;
+	margin-left: (@grid-gutter-width / 2)* -1;
+}
+
+.extra-pad{
+	padding: (@grid-gutter-width / 2);
+}
+
+.team-container{
+	padding-right: 0;
+	padding-left: 0;
+}
+.team-imgs .headshot{
+	position: relative;
+	background: @brand-primary;
+	padding-left: 0;
+	padding-right: 0;
+	img{
+		.opacity(1);
+		.transition(opacity 0.4s ease);
+	}
+}
+
+.team-imgs .name{
+	color: #fff;
+	z-index: 10;
+	position: absolute;
+	bottom: 5px;
+	left: 10px;
+	.opacity(0);
+	.transition(opacity 0.4s ease);
+	h4{
+		margin:0;
+	}
+}
+
+.team-imgs a:hover{
+	.name{
+		.opacity(1);
+	}
+	img{
+		.opacity(0.5);
+	}
+}
+
+.team-back{
+	margin:20px 0;
+	font-size: @font-size-h4;
+}
+
 @media (min-width: @screen-sm-min)  {
 	.logged-in .navbar-fixed-top{
 		top: 32px;
@@ -43,9 +101,21 @@ a:focus{
 	.portfolio .navbar-toggle, .category .navbar-toggle{
 		color: #484848;
 	}
+
+	.single-col:after{
+		width: 100%;
+	}
+	.wrap{
+		width: 100%;
+	}
+
 }
 @media (min-width: @screen-md-min)  {
 	
+	.wrap{
+		width: @container-md;
+	}
+
 	header .container{
 		width: 100%;
 	}
@@ -108,7 +178,7 @@ a:focus{
 			border-radius: 0;
 			border: none;
 			background: @gray-dark;
-			font-size: 14px;
+			font-size: @font-size-base;
 			a{
 				color: #fff;
 				text-transform: uppercase;
@@ -146,9 +216,7 @@ a:focus{
 		}
 	}
 
-	.extra-pad{
-		padding: (@grid-gutter-width / 2);
-	}
+	
 
 	.breadcrumbs{
 		font-family: @headings-font-family;
@@ -156,65 +224,8 @@ a:focus{
 		margin-bottom: 80px;
 	}
 
-	.team-container{
-		padding-right: 0;
-		padding-left: 0;
-	}
-	.team-imgs .headshot{
-		position: relative;
-		background: @brand-primary;
-		padding-left: 0;
-		padding-right: 0;
-		img{
-			.opacity(1);
-			.transition(opacity 0.4s ease);
-		}
-	}
-
-	.team-imgs .name{
-		color: #fff;
-		z-index: 10;
-		position: absolute;
-		bottom: 5px;
-		left: 10px;
-		.opacity(0);
-		.transition(opacity 0.4s ease);
-		h4{
-			margin:0;
-		}
-	}
-
-	.team-imgs a:hover{
-		.name{
-			.opacity(1);
-		}
-		img{
-			.opacity(0.5);
-		}
-	}
-
-	.team-back{
-		margin:20px 0;
-		font-size: @font-size-h4;
-	}
-
 	.single-col:after{
-		//.make-md-column(4);	
-		width: 318px;
-	}
-	.team-col:after{
-		//.make-sm-column(6);
-	}
-	.fixed-col:after{
-		background: #fff;
-		background: rgba(255, 255, 255, 0.85);
-		position: fixed;
-		top: 0;
-		content: "";
-		display: block;
-		height: 5000px;
-		z-index: -1;
-		margin-left: (@grid-gutter-width / 2)* -1;
+		width: 313px;
 	}
 
 	.page.fixed-col{
@@ -234,7 +245,7 @@ a:focus{
 	}
 	.single-portfolio h3 small{
 		cursor: pointer;
-		font-size: 12px;
+		font-size: @font-size-small;
 		padding: 7px 0;
 		color:#000;
 		i{
@@ -323,6 +334,10 @@ a:focus{
 
 }
 @media (min-width: @screen-lg-min)  {
+	.wrap{
+		width: @container-lg;
+	}
+
 	.single-col:after{
 		width: 380px;
 	}

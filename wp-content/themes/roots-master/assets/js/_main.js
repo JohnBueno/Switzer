@@ -53,10 +53,12 @@
                 cbpBGSlideshow.init();
 
                 $(".boxer").boxer({
-                    mobile: true,
-                    callback: function() {
+                    mobile: true
+                });
 
-                    }
+                $(".toggle-sidenav").on('click', function(e){
+                    e.preventDefault();
+                    $('#side-nav').toggleClass('open');
                 });
             }
         },

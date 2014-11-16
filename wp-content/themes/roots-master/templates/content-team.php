@@ -16,7 +16,7 @@
 				// do something
 	?>
 		
-		<div class="col-md-4 headshot">
+		<div class="col-md-4 col-sm-6 headshot">
 		<a href="<? the_permalink(); ?>">
 		<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/assets/img/team-fpo.jpg" alt="">
 		<span class="name">

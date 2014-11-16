@@ -29,11 +29,17 @@
         </div>
     </header>
 </div>
-
-<div class="side-nav">
-    <?php
-        if (has_nav_menu('primary_navigation')) :
-            wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'slide'));
-        endif;
-    ?>
+<div class="hide-overflow">
+    <a class="open-sidenav toggle-sidenav" href="#">
+        <i class="fa fa-bars"></i>
+    </a>
+    <div id="side-nav" class="side-nav">
+        <a class="toggle-sidenav" href="#"><i class="fa fa-close text-right"></i></a>
+        <?php
+            if (has_nav_menu('primary_navigation')) :
+                wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'slide'));
+            endif;
+        ?>
+    </div>    
 </div>
+
