@@ -5,7 +5,7 @@
 
 <div class="col-md-12 category-thumbs">
 	<div class="row">
-		<div class="col-md-3 category-title">
+		<div class="col-md-3 col-sm-4 category-title">
 			<img class="img-responsive" src="<?php bloginfo('template_url') ?>/assets/img/category-title-bg.gif" alt="<?php echo roots_title(); ?>">
 			<h4><?php echo roots_title(); ?></h4>
 		</div>
@@ -25,7 +25,7 @@
 					$query->the_post();
 		?>						
 					
-		<div class="col-md-3">
+		<div class="col-md-3 col-sm-4">
 			<div class="bg">
 				<a href="<?php the_permalink(); ?>">
 					<?php if (get_field('thumb')): ?>
