@@ -94,6 +94,101 @@ a:focus{
 	font-size: @font-size-h4;
 }
 
+.portfolio-fixed{
+	top: 0;
+	position:fixed; 
+	width:100%;
+	left: 0;
+	background: #fff;
+	z-index: 1;
+	border-bottom: 1px solid #d6d5d5;
+}
+
+.portfolio-categories .category-thumbs{
+	margin-top: 150px;
+}
+
+.page-header{
+	margin-top: (@line-height-computed * 1);
+	border-bottom: none;
+}
+
+.portfolio-categories .page-header{
+	margin-top: 20px;
+	text-transform: uppercase;
+	border-bottom: none;
+}
+
+.portfolio-categories .breadcrumbs{
+	margin-bottom: 20px;
+}
+
+.portfolio-categories .portfolio-dropdown{
+	width: 100%;
+	button{
+		width: 100%;
+		text-align: left;
+		border-radius: 0;
+		border: none;
+		background: @gray;
+		padding: 10px 20px;
+		.caret{
+			margin-top: 8px;
+		}
+	}
+	.dropdown-menu{
+		width: 100%;
+		margin-top: -1px;
+		padding: 0;
+		border-radius: 0;
+		border: none;
+		background: @gray-dark;
+		font-size: @font-size-base;
+		a{
+			color: #fff;
+			text-transform: uppercase;
+			padding: 5px 20px;
+		}
+		a:hover{
+			background: @gray;
+			color:#000;
+		}
+		
+	}
+}
+
+.portfolio-categories .col-md-3{ 
+	h4{
+		position: absolute;
+		bottom: 5px;
+		left: @grid-gutter-width;
+		color: #fff;
+		text-transform: uppercase;
+	}
+	
+	.bg{
+		background: @brand-primary;
+		img{
+			.opacity(1);
+			.transition(opacity 0.4s ease);
+		}
+	}
+}
+
+.portfolio-categories .col-md-3{
+	.bg a:hover img{
+		.opacity(0.5);
+	}
+}
+
+
+
+.breadcrumbs{
+	font-family: @headings-font-family;
+	text-transform: uppercase;
+	margin-bottom: 80px;
+}
+
 @media (min-width: @screen-sm-min)  {
 	.logged-in .navbar-fixed-top{
 		top: 32px;
@@ -110,6 +205,12 @@ a:focus{
 		width: 100%;
 		padding-left: 0;
 		padding-right: 0;
+	}
+
+	.category .wrap{
+		width: @container-sm;
+		padding-left: (@grid-gutter-width / 2);
+		padding-right: (@grid-gutter-width / 2);
 	}
 
 }
@@ -135,99 +236,7 @@ a:focus{
 		background: url(../img/shadow.png);
 	}
 
-	.portfolio-fixed{
-		position:fixed; 
-		width:100%;
-		left: 0;
-		background: #fff;
-		z-index: 1;
-		border-bottom: 1px solid #d6d5d5;
-	}
-	
-	.portfolio-categories .category-thumbs{
-		margin-top: 150px;
-	}
 
-	.page-header{
-		margin-top: (@line-height-computed * 1);
-		border-bottom: none;
-	}
-
-	.portfolio-categories .page-header{
-		margin-top: 20px;
-		text-transform: uppercase;
-		border-bottom: none;
-	}
-
-	.portfolio-categories .breadcrumbs{
-		margin-bottom: 20px;
-	}
-
-	.portfolio-categories .portfolio-dropdown{
-		width: 100%;
-		button{
-			width: 100%;
-			text-align: left;
-			border-radius: 0;
-			border: none;
-			background: @gray;
-			padding: 10px 20px;
-			.caret{
-				margin-top: 8px;
-			}
-		}
-		.dropdown-menu{
-			width: 100%;
-			margin-top: -1px;
-			padding: 0;
-			border-radius: 0;
-			border: none;
-			background: @gray-dark;
-			font-size: @font-size-base;
-			a{
-				color: #fff;
-				text-transform: uppercase;
-				padding: 5px 20px;
-			}
-			a:hover{
-				background: @gray;
-				color:#000;
-			}
-			
-		}
-	}
-
-	.portfolio-categories .col-md-3{ 
-		h4{
-			position: absolute;
-			bottom: 5px;
-			left: @grid-gutter-width;
-			color: #fff;
-			text-transform: uppercase;
-		}
-		
-		.bg{
-			background: @brand-primary;
-			img{
-				.opacity(1);
-				.transition(opacity 0.4s ease);
-			}
-		}
-	}
-
-	.portfolio-categories .col-md-3{
-		.bg a:hover img{
-			.opacity(0.5);
-		}
-	}
-
-	
-
-	.breadcrumbs{
-		font-family: @headings-font-family;
-		text-transform: uppercase;
-		margin-bottom: 80px;
-	}
 
 	.single-col:after{
 		width: 313px;

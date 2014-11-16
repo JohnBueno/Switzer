@@ -8,7 +8,7 @@
 <div class="col-md-12 category-thumbs">
 	<div class="row">
 		<?php foreach ($categories as $c): ?>			
-			<div class="col-md-3">
+			<div class="col-md-3 col-sm-4">
 				<?php $image = get_field('category_image', $c->taxonomy . '_' . $c->term_id); ?>
 				<div class="bg">
 					<a href="<?php echo(get_category_link($c->cat_ID)); ?>">
