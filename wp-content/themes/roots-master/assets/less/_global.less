@@ -35,6 +35,37 @@ a:focus{
 	left: 50%;
 }
 
+.cbp-bislideshow, .shadow{
+		display: none;
+}
+
+.home .cbp-bislideshow, .home .shadow{
+		display: block;
+}
+
+.cbp-bipause{
+	display: none;
+}
+.cbp-biprev, .cbp-binext{
+	display: none;
+	cursor: pointer;
+	font-size: 40px;
+	top:50%;
+	margin-top: -30px;
+	color: #fff;
+	position: fixed;
+	background: rgba(0, 0, 0, 0.70);
+}
+
+.cbp-biprev{
+	padding: 15px 20px 15px 15px;
+	left: 0;
+}
+.cbp-binext{
+	padding: 15px 15px 15px 20px;
+	right: 0;
+}
+
 .fixed-col:after{
 	background: #fff;
 	background: rgba(255, 255, 255, 0.85);
@@ -190,6 +221,10 @@ a:focus{
 }
 
 @media (min-width: @screen-sm-min)  {
+
+	.cbp-bislideshow, .shadow, .cbp-biprev, .cbp-binext{
+		display: block;
+	}
 	.logged-in .navbar-fixed-top{
 		top: 32px;
 	}
@@ -205,45 +240,6 @@ a:focus{
 		width: 100%;
 		padding-left: 0;
 		padding-right: 0;
-	}
-
-	// .category .wrap{
-	// 	width: @container-sm;
-	// 	padding-left: (@grid-gutter-width / 2);
-	// 	padding-right: (@grid-gutter-width / 2);
-	// }
-
-}
-@media (min-width: @screen-md-min)  {
-	
-	.wrap{
-		width: @container-md;
-		padding-left: (@grid-gutter-width / 2);
-		padding-right: (@grid-gutter-width / 2);
-	}
-
-	header .container{
-		width: 100%;
-	}
-
-	.shadow{
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 431px;
-		z-index: -1;
-		background: url(../img/shadow.png);
-	}
-
-
-
-	.single-col:after{
-		width: 313px;
-	}
-
-	.page.fixed-col{
-		padding-bottom: 50px;
 	}
 
 	.single-portfolio{
@@ -297,28 +293,43 @@ a:focus{
 	.single-portfolio .entry-content .dropdown.fade-in{
 		.opacity(1);
 	}
+
+}
+@media (min-width: @screen-md-min)  {
 	
-	.cbp-bipause{
-		display: none;
-	}
-	.cbp-biprev, .cbp-binext{
-		cursor: pointer;
-		font-size: 40px;
-		top:50%;
-		margin-top: -30px;
-		color: #fff;
-		position: fixed;
-		background: rgba(0, 0, 0, 0.70);
+	.wrap{
+		width: @container-md;
+		padding-left: (@grid-gutter-width / 2);
+		padding-right: (@grid-gutter-width / 2);
 	}
 
-	.cbp-biprev{
-		padding: 15px 20px 15px 15px;
+	header .container{
+		width: 100%;
+	}
+
+	.shadow{
+		position: fixed;
+		top: 0;
 		left: 0;
+		width: 100%;
+		height: 431px;
+		z-index: -1;
+		background: url(../img/shadow.png);
 	}
-	.cbp-binext{
-		padding: 15px 15px 15px 20px;
-		right: 0;
+
+
+
+	.single-col:after{
+		width: 313px;
 	}
+
+	.page.fixed-col{
+		padding-bottom: 50px;
+	}
+
+	
+	
+	
 
 	.experience{
 		display: block;

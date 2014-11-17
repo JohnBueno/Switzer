@@ -12,7 +12,7 @@
 
 
 
-<div class="col-md-4 col-md-offset-6 single-portfolio">
+<div class="col-md-4 col-md-offset-6 col-sm-6 col-sm-offset-6 single-portfolio">
 	<div class="extra-pad">
         <?php get_template_part('templates/content', 'single'); ?>
     </div>

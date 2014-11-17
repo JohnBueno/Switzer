@@ -38,7 +38,7 @@ html, body{
 }
 
 .open-sidenav{
-	z-index: 100;
+	z-index: 10;
 	position: absolute;
 	right: 25px;
 	top: 15px;
@@ -48,6 +48,7 @@ html, body{
 		color: @brand-primary;
 	}
 }
+
 .side-nav
 {
 	height: 100%;
@@ -55,7 +56,7 @@ html, body{
 	z-index: 10;
 	position: fixed;
 	overflow: hidden;
-	width: 50%;
+	width: 100%;
 	left: 100%;
 	background: @gray-darker;
 	.transition(left 0.5s ease);
@@ -75,7 +76,7 @@ html, body{
 }
 
 .open.side-nav{
-	left: 50%;
+	left: 0%;
 }
 
 .side-nav ul.slide{
@@ -119,6 +120,13 @@ html, body{
 
 
 @media (min-width: @screen-sm-min)  {
+	.side-nav
+	{
+		width: 50%;
+	}
+	.open.side-nav{
+		left: 50%;
+	}
 	.portfolio .top-nav,
 	.category .top-nav{
 		display: block;
