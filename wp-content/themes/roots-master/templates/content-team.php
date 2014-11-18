@@ -15,10 +15,10 @@
 				$query->the_post();
 				// do something
 	?>
-		
+		<?php $image = get_field('headshot'); ?>
 		<div class="col-md-4 col-sm-6 col-xs-6 headshot"> 
 		<a href="<? the_permalink(); ?>">
-		<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/assets/img/team-fpo.jpg" alt="">
+		<img class="img-responsive" src="<?php echo($image['sizes']['portfolio-thumbail']); ?>" alt="<?php the_title(); ?>">
 		<span class="name">
 			<h4><?php the_title(); ?></h4>
 			<small><?php the_field('job_title'); ?></small>
