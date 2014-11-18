@@ -28,8 +28,8 @@
 		<div class="col-md-3 col-sm-4">
 			<div class="bg">
 				<a href="<?php the_permalink(); ?>">
-					<?php if (get_field('thumb')): ?>
-						<img class="img-responsive" src="<?php echo(get_field('thumb')['sizes']['portfolio-thumbail']); ?>" alt="<?php the_title(); ?>">
+					<?php if ($image = get_field('thumb')): ?>
+						<img class="img-responsive" src="<?php echo($image['sizes']['portfolio-thumbail']); ?>" alt="<?php the_title(); ?>">
 					<?php else: ?>				
 						<img class="img-responsive" src="<?php bloginfo('template_url') ?>/assets/img/category-title-bg.gif" alt="">
 					<?php endif; ?>
