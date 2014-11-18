@@ -11,8 +11,8 @@ Template Name: Careers Template
 <div class="col-md-5 col-md-offset-6 col-sm-offset-6 col-sm-6 single-col fixed-col page">
     <div class="extra-pad">
         <?php while (have_posts()) : the_post(); ?>
-            <?php get_template_part('templates/page', 'header'); ?>
-            <?php get_template_part('templates/content', 'page'); ?>
+            <?php get_template_part('templates/careers', 'header'); ?>
+            <?php get_template_part('templates/content', 'careers'); ?>
         <?php endwhile; ?>
     </div>
 </div>
