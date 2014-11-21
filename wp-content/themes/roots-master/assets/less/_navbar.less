@@ -11,6 +11,15 @@ html, body{
 	max-width: 220px;
 }
 
+.hide-overflow{
+	border-bottom: 1px solid @gray;
+	padding-bottom: 20px;
+}
+
+.home .hide-overflow{
+	border-bottom: none;
+}
+
 .side-nav .dropdown-menu, 
 .top-nav .dropdown-menu
 {
@@ -37,15 +46,22 @@ html, body{
 	display: none;
 }
 
-.open-sidenav{
-	z-index: 10;
-	position: absolute;
-	right: 25px;
-	top: 15px;
-	font-size: @font-size-large;
+.home .open-sidenav{
 	color: #fff;
 	&:hover{
 		color: @brand-primary;
+	}
+}
+
+.open-sidenav{
+	z-index: 10;
+	position: absolute;
+	right: 20px;
+	top: 15px;
+	font-size: @font-size-large;
+	color: @brand-primary;
+	&:hover{
+		color: #fff;
 	}
 }
 
@@ -58,6 +74,7 @@ html, body{
 	overflow: hidden;
 	width: 100%;
 	left: 100%;
+	top: 0;
 	background: @gray-darker;
 	.transition(left 0.5s ease);
 }
@@ -120,8 +137,15 @@ html, body{
 
 
 @media (min-width: @screen-sm-min)  {
-	.side-nav
-	{
+	.navbar-brand{
+		position: absolute;
+		left: 0;
+	}
+	.hide-overflow{
+		border: none;
+	}
+
+	.side-nav{
 		width: 50%;
 	}
 	.open.side-nav{
@@ -132,12 +156,12 @@ html, body{
 		display: block;
 	}
 
-	.portfolio .side-nav, 
-	.portfolio .open-sidenav,
-	.category .side-nav, 
-	.category .open-sidenav{
-		display: none;
-	}
+	// .portfolio .side-nav, 
+	// .portfolio .open-sidenav,
+	// .category .side-nav, 
+	// .category .open-sidenav{
+	// 	display: none;
+	// }
 
 	.top-nav .navbar{
 		min-height: 0;
@@ -233,6 +257,9 @@ html, body{
 }
 
 @media (min-width: @screen-md-min)  {
+	.hide-overflow{
+		display: none;
+	}
 	.side-nav, .open-sidenav{
 		display: none;
 	}

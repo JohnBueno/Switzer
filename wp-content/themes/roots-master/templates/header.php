@@ -30,9 +30,17 @@
     </header>
 </div>
 <div class="hide-overflow">
-    <a class="open-sidenav toggle-sidenav" href="#">
-        <i class="fa fa-bars"></i>
-    </a>
+    <div class="container">
+        <div class="row">
+            <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
+                <img class="img-responsive hidden-xs" src="<?php bloginfo('template_url'); ?>/assets/img/hdr-logo.png" alt="<?php bloginfo('name'); ?>">
+                <img class="img-responsive visible-xs" src="<?php bloginfo('template_url'); ?>/assets/img/hdr-logo-dark.png" alt="<?php bloginfo('name'); ?>">
+            </a>
+            <a class="open-sidenav toggle-sidenav" href="#">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
     <div id="side-nav" class="side-nav">
         <a class="toggle-sidenav" href="#"><i class="fa fa-close text-right"></i></a>
         <?php
