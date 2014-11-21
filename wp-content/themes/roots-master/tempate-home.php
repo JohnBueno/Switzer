@@ -3,14 +3,19 @@
 Template Name: Home Template
 */
 ?>
+<?php while (have_posts()) : the_post(); ?>
 
 <ul id="cbp-bislideshow" class="cbp-bislideshow">
-	<li><img src="<?php bloginfo('template_url'); ?>/assets/img/home-bg-1.jpg" alt="image01"/></li>
-	<li><img src="<?php bloginfo('template_url'); ?>/assets/img/home-bg-2.jpg" alt="image02"/></li>
-	<li><img src="<?php bloginfo('template_url'); ?>/assets/img/home-bg-3.jpg" alt="image03"/></li>
-	<li><img src="<?php bloginfo('template_url'); ?>/assets/img/home-bg-4.jpg" alt="image04"/></li>
-	<li><img src="<?php bloginfo('template_url'); ?>/assets/img/home-bg-5.jpg" alt="image05"/></li>
+    <?php 
+        $slides = get_field('slides');
+        foreach ($slides as $slide):
+    ?>
+    <li><img src="<?php echo($slide['slide']['url']); ?>"/></li>
+    <?php endforeach; ?>
+	
 </ul>
+
+<?php endwhile; ?>
 <div class="shadow"></div>
 <div class="logo">
 	<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/assets/img/home-logo.png" alt="">

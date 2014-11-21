@@ -19,6 +19,7 @@ function roots_setup() {
   // http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support('post-thumbnails');
   add_image_size( 'portfolio-thumbail', 400, 286, true );
+  add_image_size( 'team-wide', 600, 290, true );
 
   // Add post formats
   // http://codex.wordpress.org/Post_Formats

@@ -5,7 +5,13 @@ Template Name: Careers Template
 ?>
 
 <ul id="cbp-bislideshow" class="cbp-bislideshow">
-    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/home-bg-1.jpg" alt="image01"/></li>
+    <?php 
+        $slides = get_field('slides');
+        foreach ($slides as $slide):
+    ?>
+    <li><img src="<?php echo($slide['slide']['url']); ?>"/></li>
+    <?php endforeach; ?>
+    
 </ul>
 <div class="shadow"></div>
 <div class="col-md-5 col-md-offset-6 col-sm-offset-6 col-sm-6 single-col fixed-col page">

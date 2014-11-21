@@ -1,7 +1,11 @@
 <ul id="cbp-bislideshow" class="cbp-bislideshow">
-	<li><img src="<?php bloginfo('template_url'); ?>/assets/img/home-bg-1.jpg" alt="image01"/></li>
-    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/home-bg-2.jpg" alt="image01"/></li>
-    <li><img src="<?php bloginfo('template_url'); ?>/assets/img/home-bg-3.jpg" alt="image01"/></li>
+    <?php 
+        $slides = get_field('slides');
+        foreach ($slides as $slide):
+    ?>
+    <li><img src="<?php echo($slide['slide']['url']); ?>"/></li>
+    <?php endforeach; ?>
+    
 </ul>
 <div class="shadow"></div>
 <div id="cbp-bicontrols" class="cbp-bicontrols">
