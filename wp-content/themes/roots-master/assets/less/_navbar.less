@@ -8,7 +8,7 @@ html, body{
 	display: none;
 }
 .navbar-brand{
-	max-width: 220px;
+	max-width: 250px;
 }
 
 .hide-overflow{
@@ -36,11 +36,28 @@ html, body{
 	padding-bottom: 0;
 	top:0;
 } 
-.side-nav .dropdown-menu:nth-of-type(1), 
-.top-nav .dropdown-menu:nth-of-type(1)
+
+.top-nav li.dropdown
 {
-    display: block;
+	// li{
+
+	// 	.opacity(0);
+	// 	.transition(opacity 0.4s ease);
+	// }
+
+	min-height: 142px;
+	ul{
+		display: none;	
+	}
 } 
+
+// .top-nav .dropdown-menu.open li{
+// 	.opacity(1);
+// }
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+	color: #fff;
+}
 
 .dropdown-toggle b.caret{
 	display: none;
@@ -156,13 +173,6 @@ html, body{
 		display: block;
 	}
 
-	// .portfolio .side-nav, 
-	// .portfolio .open-sidenav,
-	// .category .side-nav, 
-	// .category .open-sidenav{
-	// 	display: none;
-	// }
-
 	.top-nav .navbar{
 		min-height: 0;
 		text-transform: uppercase;
@@ -170,6 +180,8 @@ html, body{
 	}
 	
 	.top-nav .navbar-toggle{
+		margin-top: 30px;
+		margin-right: 25px;
 		color: #fff;
 		border: none;
 	}
@@ -203,7 +215,10 @@ html, body{
 		left: 0;
 		padding-top: @navbar-padding-vertical - 3px;
 	}
-
+	
+	.top-nav .navbar-nav{
+		margin: 40px 0;
+	}
 	.portfolio .top-nav .navbar-default, .category .top-nav .navbar-default{
 		z-index: 10;
 	}
@@ -231,12 +246,14 @@ html, body{
 		border-top: none;
 	}
 
-
+	
 	.top-nav .nav > li{
 		float: left;
 	}
 	.top-nav .nav > li > a{
 		display: inline-block;
+		padding-top: 0;
+		padding-bottom: 22px;
 		color: #777777;
 	}
 	.top-nav .navbar-right{
@@ -245,11 +262,14 @@ html, body{
 
 	.top-nav .navbar-nav .dropdown-menu {
 		left: 210px; 
-		width: 210px; 
+		min-width: 225px; 
 		margin-right: -210px;
-		margin-bottom: 10px;
+		margin-bottom: 0px;
 	}
-	
+	.top-nav .navbar-nav .dropdown-menu > li{
+		margin-bottom: 5px;
+	}
+
 	.top-nav .navbar-nav .dropdown-menu > li > a, 
 	.top-nav .navbar-nav .open .dropdown-menu > li > a{
 		padding: 0px 15px 0px 13px !important;
@@ -278,7 +298,8 @@ html, body{
 	.top-nav .navbar-brand{
 		position: absolute;
 		left: 0;
-		padding-top: @navbar-padding-vertical - 3px;
+		padding-top: 44px;
+		padding-left: 44px;
 	}
 	
 	.home .top-nav .navbar-brand{

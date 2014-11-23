@@ -25,12 +25,12 @@
                 // JavaScript to be fired on all pages
                 // ADD SLIDEDOWN ANIMATION TO DROPDOWN //
                 $('.dropdown').on('show.bs.dropdown', function(e) {
-                    $(this).find('.dropdown-menu').first().stop(true, true).slideDown(200);
+                    $(this).find('.dropdown-menu').first().fadeIn();
                 });
 
                 // ADD SLIDEUP ANIMATION TO DROPDOWN //
                 $('.dropdown').on('hide.bs.dropdown', function(e) {
-                    $(this).find('.dropdown-menu').first().stop(true, true).slideUp(200);
+                    $(this).find('.dropdown-menu').first().fadeOut();
                 });
 
                 $('#expand-portfolio').on('click', function(e) {
