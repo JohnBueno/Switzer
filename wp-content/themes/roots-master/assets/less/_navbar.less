@@ -9,6 +9,9 @@ html, body{
 }
 .navbar-brand{
 	max-width: 250px;
+	position: absolute;
+	left: 10px;
+	top: 15px;
 }
 
 .hide-overflow{
@@ -73,8 +76,8 @@ html, body{
 .open-sidenav{
 	z-index: 10;
 	position: absolute;
-	right: 20px;
-	top: 15px;
+	right: 25px;
+	top: 30px;
 	font-size: @font-size-large;
 	color: @brand-primary;
 	&:hover{
@@ -154,10 +157,7 @@ html, body{
 
 
 @media (min-width: @screen-sm-min)  {
-	.navbar-brand{
-		position: absolute;
-		left: 0;
-	}
+
 	.hide-overflow{
 		border: none;
 	}
@@ -296,10 +296,11 @@ html, body{
 
 
 	.top-nav .navbar-brand{
+		max-width: 187px;
 		position: absolute;
-		left: 0;
-		padding-top: 44px;
-		padding-left: 44px;
+		top: 44px;
+		left: 44px;
+		padding: 0;
 	}
 	
 	.home .top-nav .navbar-brand{
@@ -311,7 +312,7 @@ html, body{
 
 	.finish-animate .top-nav .navbar-brand{
 		.opacity(1);
-		top: 0px;
+		top: 44px;
 		.transition(opacity 2.0s ease);
 		.transition(top 2.5s ease);
 	}
