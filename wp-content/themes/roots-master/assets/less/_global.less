@@ -243,13 +243,14 @@ a:focus{
 		font-size: 16px;
 		position: absolute;
 		bottom: 5px;
-		left: @grid-gutter-width;
+		left: (@grid-gutter-width/2);
 		color: #fff;
 		text-transform: uppercase;
 		font-family: @font-family-sans-serif;
 	}
 	
 	.bg{
+		position: relative;
 		background: @brand-primary;
 		img{
 			.opacity(1);

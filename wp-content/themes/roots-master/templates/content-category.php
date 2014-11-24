@@ -1,19 +1,19 @@
-<?php 
-	$categories = get_the_category();
-	$category_id = $categories[0]->cat_ID;
-?>
 
 <div class="col-md-12 category-thumbs">
+
 	<div class="row">
 		<div class="col-md-3 col-sm-4 category-title">
+            <div class="bg">
 			<img class="img-responsive" src="<?php bloginfo('template_url') ?>/assets/img/category-title-bg.gif" alt="<?php echo roots_title(); ?>">
 			<h4><?php echo roots_title(); ?></h4>
+            </div>
 		</div>
-	
-		<?php 
+
+		<?php
+            $this_category = get_category($cat);
 			$args = array (
 				'post_type'	=> 'portfolio',
-				'cat' => $category_id
+				'cat' => $this_category->cat_ID
 			);
 
 			// The Query
@@ -24,7 +24,7 @@
 				while ( $query->have_posts() ):
 					$query->the_post();
 		?>						
-					
+		
 		<div class="col-md-3 col-sm-4">
 			<div class="bg">
 				<a href="<?php the_permalink(); ?>">
