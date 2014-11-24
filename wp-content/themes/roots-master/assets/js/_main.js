@@ -68,7 +68,7 @@
                 // JavaScript to be fired on the home page
                 $slideshow = $('#cbp-bislideshow');
                 $slideshow.imagesLoaded(function() {
-                    $("body").addClass("animate").delay(1500).queue(function() {
+                    $("body").addClass("animate").delay(5000).queue(function() {
                         $(this).removeClass("animate").addClass('finish-animate').dequeue();
                     });
                 });

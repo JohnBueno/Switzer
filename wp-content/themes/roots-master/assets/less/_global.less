@@ -40,22 +40,48 @@ a:focus{
 .cbp-biprev, .cbp-binext{
 	display: none;
 	cursor: pointer;
-	font-size: 40px;
+	font-size: 56px;
 	top:50%;
 	margin-top: -30px;
 	color: #fff;
 	position: fixed;
 	background: rgba(0, 0, 0, 0.70);
+	line-height: 0;
+	width: 49px;
+	height: 49px;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 20px;	
 }
 
 .cbp-biprev{
-	padding: 15px 20px 15px 15px;
 	left: 0;
+	background-image: url(../img/previous.png);
 }
 .cbp-binext{
-	padding: 15px 15px 15px 20px;
 	right: 0;
+	background-image: url(../img/next.png);
 }
+
+.boxer-control{
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 20px;	
+	height: 100%;
+	top: 0px;
+	position: fixed;
+}
+.boxer-control.next{
+	right: 0;
+	background-image: url(../img/next.png);
+}
+
+.boxer-control.previous{
+	left: 0;
+	background-image: url(../img/previous.png);
+}
+
 
 .logo{
 	position: fixed;
@@ -127,6 +153,7 @@ a:focus{
 	.transition(opacity 0.4s ease);
 	h4{
 		margin:0;
+		font-family: @font-family-sans-serif;
 	}
 }
 
@@ -165,12 +192,8 @@ a:focus{
 }
 
 .page-header{
-	margin-top: (@line-height-computed * 1);
+	margin-top: 38px;
 	border-bottom: none;
-}
-
-.portfolio-categories .page-header{
-	margin-top: 40px;
 	text-transform: uppercase;
 	border-bottom: none;
 }
@@ -222,6 +245,7 @@ a:focus{
 		left: @grid-gutter-width;
 		color: #fff;
 		text-transform: uppercase;
+		font-family: @font-family-sans-serif;
 	}
 	
 	.bg{
@@ -244,6 +268,7 @@ a:focus{
 	text-transform: uppercase;
 	margin-bottom: 30px;
 }
+
 
 
 
@@ -272,15 +297,6 @@ a:focus{
 
 	.breadcrumbs{
 		margin-bottom: 80px;
-	}
-
-	.logo{
-		position: fixed;
-		width: 800px;
-		height: 200px;
-		margin: -80px 0 0 -400px;
-		top: 50%;
-		left: 50%;
 	}
 
 	.cbp-bislideshow, .shadow, .cbp-biprev, .cbp-binext{
@@ -358,6 +374,19 @@ a:focus{
 }
 @media (min-width: @screen-md-min)  {
 	
+	.logo{
+		position: fixed;
+		width: 100%;
+		text-align: center;
+		top: 50%;
+		left: 0;
+		margin-top: -40px;
+		img{
+			width: 860px;
+			display: inline-block;
+		}
+	}
+
 	.portfolio-fixed .col-md-offset-6{
 		background: transparent;
 	}
@@ -373,8 +402,9 @@ a:focus{
 	}
 
 	.team-imgs .headshot{
+
 		float: right;
-		width: 31.3%;
+		width: 31.2%;
 		img{
 			width: 100%;
 		}

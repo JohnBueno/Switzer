@@ -42,9 +42,14 @@
                     <a class="boxer" data-gallery="gallery" href="<?php bloginfo('template_url'); ?>/assets/img/home-bg-1.jpg">
                         <strong><i class="fa fa-caret-right"></i> <small>View Full Gallery</small></strong>
                     </a>
-                    <a href="<?php bloginfo('template_url'); ?>/assets/img/home-bg-1.jpg" class="boxer hide" data-gallery="gallery"></a>
-                    <a href="<?php bloginfo('template_url'); ?>/assets/img/home-bg-1.jpg" class="boxer hide" data-gallery="gallery"></a>
-                    <a href="<?php bloginfo('template_url'); ?>/assets/img/home-bg-1.jpg" class="boxer hide" data-gallery="gallery"></a>
+                  
+                    <?php 
+                        $slides = get_field('slides');
+                        foreach ($slides as $slide):
+                    ?>
+                        <a href="<?php echo($slide['slide']['url']); ?>" class="boxer hide" data-gallery="gallery"></a>
+                        <img src=""/>
+                    <?php endforeach; ?>
                     
                     <br/>
                     <?php 
