@@ -9,11 +9,16 @@
 	<div class="row">
 		<?php foreach ($categories as $c): ?>			
 			<div class="col-md-3 col-sm-4">
-				<?php $image = get_field('category_image', $c->taxonomy . '_' . $c->term_id); ?>
+				
 				<div class="bg">
 					<a href="<?php echo(get_category_link($c->cat_ID)); ?>">
-						<img class="img-responsive" src="<?php echo($image['sizes']['portfolio-thumbail']); ?>" alt="">
-						<h4><?php echo($c->name); ?></h4>
+                        <?php if ($image = get_field('category_image', $c->taxonomy . '_' . $c->term_id)): ?>
+                            <img class="img-responsive" src="<?php echo($image['sizes']['portfolio-thumbail']); ?>" alt="<?php the_title(); ?>">
+                        <?php else: ?>              
+                            <img class="img-responsive" src="<?php bloginfo('template_url') ?>/assets/img/category-title-bg.gif" alt="">
+                        <?php endif; ?>
+
+                        <h4><?php echo($c->name); ?></h4>
 					</a>
 				</div>
 			</div>

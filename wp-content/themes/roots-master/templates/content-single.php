@@ -38,18 +38,24 @@
         </div>
         <div class="row links">
             <div class="col-sm-6">
-                <p>
-                    <a class="boxer" data-gallery="gallery" href="<?php bloginfo('template_url'); ?>/assets/img/home-bg-1.jpg">
-                        <strong><i class="fa fa-caret-right"></i> <small>View Full Gallery</small></strong>
-                    </a>
-                  
-                    <?php 
+                <p>  
+                    <?php
+                        $i = 0; 
                         $slides = get_field('slides');
                         foreach ($slides as $slide):
                     ?>
-                        <a href="<?php echo($slide['slide']['url']); ?>" class="boxer hide" data-gallery="gallery"></a>
-                        <img src=""/>
-                    <?php endforeach; ?>
+                        <?php if ($i==0): ?>
+                            <a class="boxer" data-gallery="gallery" href="<?php bloginfo('template_url'); ?>/assets/img/home-bg-1.jpg">
+                                <strong><i class="fa fa-caret-right"></i> <small>View Full Gallery</small></strong>
+                            </a>
+                       
+                        <?php else: ?>
+                             <a href="<?php echo($slide['slide']['url']); ?>" class="boxer hide" data-gallery="gallery"></a>
+                        <?php endif; ?>    
+                    <?php 
+                        $i++;
+                        endforeach; 
+                    ?>
                     
                     <br/>
                     <?php 

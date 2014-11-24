@@ -17,6 +17,7 @@ html, body{
 .hide-overflow{
 	border-bottom: 1px solid @gray;
 	padding-bottom: 20px;
+	min-height: 85px;
 }
 
 .home .hide-overflow{
@@ -157,6 +158,9 @@ html, body{
 
 
 @media (min-width: @screen-sm-min)  {
+	.hide-overflow{
+		min-height: 0;
+	}
 	
 	.portfolio .top-nav .navbar-toggle{
 		display: none;

@@ -14,18 +14,18 @@ Template Name: Team Template
 </ul>
 <div class="shadow"></div>
 	<?php while (have_posts()) : the_post(); ?>
-		<div class="col-md-5 col-md-offset-6 col-sm-offset-6 col-sm-6 single-col fixed-col">
+		<div class="col-md-5 col-xs-12 col-md-offset-6 col-sm-offset-6 col-sm-6 single-col fixed-col">
             <div class="extra-pad">
   			   <?php get_template_part('templates/page', 'header'); ?>
             </div>
   		</div>
 
-		<div class="team-container col-md-8 col-md-offset-3 col-sm-offset-6 col-sm-6">
+		<div class="team-container col-xs-12 col-md-8 col-md-offset-3 col-sm-offset-6 col-sm-6">
 			<?php get_template_part('templates/content', 'team'); ?>
 		</div>
   		
 
-		<div class="col-md-5 col-md-offset-6 col-sm-offset-6 col-sm-6">
+		<div class="col-xs-12 col-md-5 col-md-offset-6 col-sm-offset-6 col-sm-6">
             <div class="extra-pad">
     	  		<ul class="siblings">
     			  <?php
