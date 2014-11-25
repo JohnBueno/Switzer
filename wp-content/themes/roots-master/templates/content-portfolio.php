@@ -1,13 +1,21 @@
 <?php 
- 	$args = array(
+ 	$blanks = [1, 3, 8];    
+    $args = array(
 		'type' => 'portfolio',
 		'exclude' => 1
 	);
  	$categories = get_categories($args);
+    $i = 0;
 ?>
 <div class="col-md-12 category-thumbs">
 	<div class="row">
-		<?php foreach ($categories as $c): ?>			
+		<?php foreach ($categories as $c): ?>
+
+            <?php if(in_array($i, $blanks)): ?>
+                <div class="col-md-3 col-sm-4 blank">
+                    <img class="img-responsive" src="<?php bloginfo('template_url') ?>/assets/img/blank.gif" alt="">
+                </div>
+            <?php endif; ?>			
 			<div class="col-md-3 col-sm-4">
 				
 				<div class="bg">
@@ -22,6 +30,8 @@
 					</a>
 				</div>
 			</div>
-		<?php endforeach; ?>
+		<?php 
+        $i++;
+        endforeach; ?>
 	</div>	
 </div>

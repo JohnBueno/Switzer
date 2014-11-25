@@ -9,7 +9,8 @@
             </div>
 		</div>
 
-		<?php
+		<?php            
+
             $this_category = get_category($cat);
 			$args = array (
 				'post_type'	=> 'portfolio',
@@ -24,7 +25,8 @@
 				while ( $query->have_posts() ):
 					$query->the_post();
 		?>						
-		
+
+
 		<div class="col-md-3 col-sm-4">
 			<div class="bg">
 				<a href="<?php the_permalink(); ?>">
@@ -39,6 +41,7 @@
 		</div>
 
 		<?php
+            $i++;
 			endwhile;
 			endif;
 			wp_reset_postdata();

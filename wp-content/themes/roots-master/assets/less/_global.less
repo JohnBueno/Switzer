@@ -195,6 +195,8 @@ a:focus{
 	margin-top: 20px;
 }
 
+
+
 .page-header{
 	margin-top: 38px;
 	border-bottom: none;
@@ -275,12 +277,26 @@ a:focus{
 	margin-bottom: 30px;
 }
 
-
+.category-thumbs .blank{
+	display: none;
+}
 
 
 @media (min-width: @screen-sm-min)  {
-
-
+	.category-thumbs .blank{
+		display: block;
+		img{
+			width: 100%;
+		}
+	}
+	// .category-thumbs .blank{
+	// 	display: block;
+	// 	height: 100%;
+	// 	img{
+	// 		width: 100%;
+	// 		max-height: 145px;
+	// 	}
+	// }
 
 	.portfolio-categories .col-md-3{ 
 		max-width: none;
@@ -379,7 +395,9 @@ a:focus{
 
 }
 @media (min-width: @screen-md-min)  {
-	
+	// .category-thumbs .blank img{
+	// 	min-height: 146px;
+	// }
 	.logo{
 		position: fixed;
 		width: 100%;
@@ -459,6 +477,9 @@ a:focus{
 
 }
 @media (min-width: @screen-lg-min)  {
+	// .category-thumbs .blank img{
+	// 	min-height: 182px;
+	// }
 	.wrap{
 		width: @container-lg;
 	}
