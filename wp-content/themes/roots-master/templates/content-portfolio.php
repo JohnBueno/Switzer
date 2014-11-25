@@ -1,5 +1,6 @@
 <?php 
- 	$blanks = [1, 3, 8];    
+ 	//$blanks = [1, 3, 8];
+    $blanks = array(1, 3, 8);
     $args = array(
 		'type' => 'portfolio',
 		'exclude' => 1

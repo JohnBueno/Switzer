@@ -14,7 +14,9 @@
             $this_category = get_category($cat);
 			$args = array (
 				'post_type'	=> 'portfolio',
-				'cat' => $this_category->cat_ID
+				'cat' => $this_category->cat_ID,
+                'order' => ASC,
+                'orderby' =>'title'
 			);
 
 			// The Query
