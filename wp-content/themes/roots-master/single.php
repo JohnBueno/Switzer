@@ -1,10 +1,7 @@
 <ul id="cbp-bislideshow" class="cbp-bislideshow">
-    <?php 
-        $slides = get_field('slides');
-        foreach ($slides as $slide):
-    ?>
-    <li><img src="<?php echo($slide['slide']['url']); ?>"/></li>
-    <?php endforeach; ?>
+    <?php if($bg = get_field('background')): ?>
+        <li><img src="<?php echo($bg['url']); ?>"/></li>
+    <?php endif; ?>
     
 </ul>
 <div class="shadow"></div>

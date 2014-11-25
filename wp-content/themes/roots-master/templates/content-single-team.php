@@ -14,7 +14,7 @@
     	</div>
     </div>
     <?php if($image = get_field('wide_headshot')): ?>
-        
+       
     <div class="row team-img-lg">
     	<img class="img-responsive" src="<?php echo($image['sizes']['team-wide']); ?>" alt="<?php the_title(); ?>">
     </div>
