@@ -5,11 +5,7 @@
     
 </ul>
 <div class="shadow"></div>
-<div id="cbp-bicontrols" class="cbp-bicontrols">
-    <span class="cbp-biprev"></span>
-    <span class="cbp-bipause">pause</span>
-    <span class="cbp-binext"></span>
-</div>
+
 
 
 

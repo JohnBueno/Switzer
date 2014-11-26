@@ -1,5 +1,11 @@
 <ul id="cbp-bislideshow" class="cbp-bislideshow">
-	<li><img src="<?php bloginfo('template_url'); ?>/assets/img/home-bg-1.jpg" alt="image01"/></li>
+    <?php 
+        $slides = get_field('slides');
+        foreach ($slides as $slide):
+    ?>
+    <li><img src="<?php echo($slide['slide']['url']); ?>"/></li>
+    <?php endforeach; ?>
+    
 </ul>
 <div class="shadow"></div>
 
@@ -8,9 +14,11 @@
   <article <?php post_class(); ?>>
     <div class="row">
     	<div class="col-sm-12">
-    		<a class="team-back pull-right" href="<?php bloginfo('url'); ?>/about/meet-our-team">
-    			<i class="fa fa-times"></i>
+            <div class="extra-pad">
+    		<a class="team-back pull-right btn-close" href="<?php bloginfo('url'); ?>/about/meet-our-team">
+    			<img src="<?php bloginfo('template_url'); ?>/assets/img/btn-close.png" alt="close">
     		</a>
+            </div>
     	</div>
     </div>
     <?php if($image = get_field('wide_headshot')): ?>

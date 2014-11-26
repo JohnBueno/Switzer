@@ -45,12 +45,12 @@
                         foreach ($slides as $slide):
                     ?>
                         <?php if ($i==0): ?>
-                            <a class="boxer" data-gallery="gallery" href="<?php bloginfo('template_url'); ?>/assets/img/home-bg-1.jpg">
+                            <a class="boxer" data-gallery="gallery1" href="<?php echo($slide['slide']['url']); ?>">
                                 <strong><i class="fa fa-caret-right"></i> <small>View Full Gallery</small></strong>
                             </a>
                        
                         <?php else: ?>
-                             <a href="<?php echo($slide['slide']['url']); ?>" class="boxer hide" data-gallery="gallery"></a>
+                             <a href="<?php echo($slide['slide']['url']); ?>" class="boxer hide" data-gallery="gallery1"></a>
                         <?php endif; ?>    
                     <?php 
                         $i++;
@@ -79,4 +79,27 @@
     </div>
 
 </article>
+
+<div id="gallery-bicontrols" class="gallery-bicontrols">
+<?php
+    $i = 1; 
+    foreach ($slides as $slide):
+?>
+    <?php if ($i==1): ?>
+        <a href="<?php echo($slide['slide']['url']); ?>" class="gallery-binext boxer" title="<?php the_title(); ?>, <?php the_field('location');?>" data-gallery="gallery2"></a>
+    <?php elseif($i==count($slides)): ?>
+        <a href="<?php echo($slide['slide']['url']); ?>" class="gallery-biprev boxer" title="<?php the_title(); ?>, <?php the_field('location');?>" data-gallery="gallery2"></a>
+    <?php else: ?>
+        <a href="<?php echo($slide['slide']['url']); ?>" class="hide boxer" title="<?php the_title(); ?>, <?php the_field('location');?>" data-gallery="gallery2"></a>
+    <?php endif; ?>    
+<?php 
+    $i++;
+    endforeach; 
+?>
+
+
+    
+    
+</div>
+
 <?php endwhile; ?>

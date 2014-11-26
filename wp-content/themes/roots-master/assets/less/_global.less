@@ -3,7 +3,7 @@ body{
 }
 
 .content ul{
-	padding-left: 20px;
+	padding-left: 15px;
 	font-size: @font-size-small;
 }
 
@@ -12,6 +12,12 @@ ul.siblings{
 	list-style-type: none;
 	padding-left: 0;
 	font-size: @font-size-base;
+}
+
+.btn-close{
+	img{
+		width: 13px;	
+	}
 }
 
 a:hover{
@@ -38,10 +44,10 @@ a:focus{
 	display: block;
 }
 
-.cbp-bipause{
+.gallery-bipause{
 	display: none;
 }
-.cbp-biprev, .cbp-binext{
+.gallery-biprev, .gallery-binext{
 	display: none;
 	cursor: pointer;
 	font-size: 56px;
@@ -59,11 +65,11 @@ a:focus{
 	background-size: 20px;	
 }
 
-.cbp-biprev{
+.gallery-biprev{
 	left: 0;
 	background-image: url(../img/previous.png);
 }
-.cbp-binext{
+.gallery-binext{
 	right: 0;
 	background-image: url(../img/next.png);
 }
@@ -198,11 +204,27 @@ a:focus{
 
 
 .page-header{
-	margin-top: 38px;
+	margin-top: 28px;
 	border-bottom: none;
-	text-transform: uppercase;
 	border-bottom: none;
 }
+
+.breadcrumbs ul{
+	font-family: @headings-font-family;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+	padding-left: 0;
+    list-style:none;
+    overflow:hidden;
+    font-size: 14px;
+    li{
+    	float:left;	
+    }
+    .separator{
+    	margin: 0 5px;
+    }
+}
+ 
 
 .portfolio-categories .breadcrumbs{
 	margin-bottom: 20px;
@@ -271,12 +293,6 @@ a:focus{
 	}
 }
 
-.breadcrumbs{
-	font-family: @headings-font-family;
-	text-transform: uppercase;
-	margin-bottom: 30px;
-}
-
 .category-thumbs .blank{
 	display: none;
 }
@@ -321,7 +337,7 @@ a:focus{
 		margin-bottom: 80px;
 	}
 
-	.cbp-bislideshow, .shadow, .cbp-biprev, .cbp-binext{
+	.cbp-bislideshow, .shadow, .gallery-biprev, .gallery-binext{
 		display: block;
 	}
 	.logged-in .navbar-fixed-top{
