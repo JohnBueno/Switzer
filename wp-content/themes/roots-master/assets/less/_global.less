@@ -5,6 +5,21 @@ body{
 .content ul{
 	padding-left: 15px;
 	font-size: @font-size-small;
+	li{
+		margin-bottom: 2px;
+	}
+}
+
+.logged-in .navbar-fixed-top{
+	top: 32px;
+}
+
+.logged-in .portfolio-fixed{
+	top: 32px;
+}
+
+.services .content ul{
+	margin-top: -8px;
 }
 
 ul.siblings{
@@ -12,6 +27,34 @@ ul.siblings{
 	list-style-type: none;
 	padding-left: 0;
 	font-size: @font-size-base;
+	text-transform: uppercase;
+	li.current_page_item a{
+		color: @brand-primary;
+	}
+	li a{
+		color: #000;
+		&:hover{
+			color: @brand-primary;
+		}
+	}
+}
+
+.navbar-brand{
+	.light{
+		display: block;
+	}
+	.dark{
+		display: none;
+	}
+}
+
+.portfolio, .category{
+	.light{
+		display: none;
+	}
+	.dark{
+		display: block;
+	}
 }
 
 .btn-close{
@@ -301,18 +344,8 @@ a:focus{
 @media (min-width: @screen-sm-min)  {
 	.category-thumbs .blank{
 		display: block;
-		img{
-			width: 100%;
-		}
 	}
-	// .category-thumbs .blank{
-	// 	display: block;
-	// 	height: 100%;
-	// 	img{
-	// 		width: 100%;
-	// 		max-height: 145px;
-	// 	}
-	// }
+
 
 	.portfolio-categories .col-md-3{ 
 		max-width: none;
@@ -327,10 +360,26 @@ a:focus{
 		.col-md-offset-6{
 			background: @gray-light;
 			padding-left: 0;
+			padding-right: 0;
 			.page-header{
+				margin-top: 40px;
 				padding-left: (@grid-gutter-width / 2);
 			}
+			.portfolio-dropdown{
+				width: 100%;
+			}
 		}
+	}
+	
+	.portfolio, .category{
+		.invert{
+			.light{
+				display: block;
+			}
+			.dark{
+				display: none;
+			}
+		}		
 	}
 
 	.breadcrumbs{
@@ -340,9 +389,7 @@ a:focus{
 	.cbp-bislideshow, .shadow, .gallery-biprev, .gallery-binext{
 		display: block;
 	}
-	.logged-in .navbar-fixed-top{
-		top: 32px;
-	}
+	
 
 	.portfolio .navbar-toggle, .category .navbar-toggle{
 		color: #484848;
@@ -352,7 +399,6 @@ a:focus{
 		width: 100%;
 	}
 	.wrap{
-		//width: 100%;
 		padding-left: 0;
 		padding-right: 0;
 	}
@@ -411,9 +457,7 @@ a:focus{
 
 }
 @media (min-width: @screen-md-min)  {
-	// .category-thumbs .blank img{
-	// 	min-height: 146px;
-	// }
+
 	.logo{
 		position: fixed;
 		width: 100%;
@@ -427,6 +471,14 @@ a:focus{
 		}
 	}
 
+	.portfolio .navbar-brand .invert{
+		.light{
+			display: block;
+		}
+		.dark{
+			display: none;
+		}
+	}
 	.portfolio-fixed .col-md-offset-6{
 		background: transparent;
 	}
@@ -491,6 +543,9 @@ a:focus{
 		.opacity(1);	
 	}
 
+	.portfolio-dropdown{
+		padding-left: (@grid-gutter-width / 2);
+	}
 }
 @media (min-width: @screen-lg-min)  {
 	// .category-thumbs .blank img{
