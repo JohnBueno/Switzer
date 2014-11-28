@@ -60,6 +60,10 @@
                     e.preventDefault();
                     $('#side-nav').toggleClass('open');
                 });
+
+                $(".navbar-toggle").on('click', function(e){
+                    $('.top-nav').find('.navbar-brand').toggleClass('invert');
+                });
             }
         },
         // Home page
