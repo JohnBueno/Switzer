@@ -2,14 +2,19 @@
 <article <?php post_class(); ?>>
     <div class="page-header">
         <div class="breadcrumbs">
-            Portfolio
+            <ul id="breadcrumbs">
+                <li>
+                <a href="<?php bloginfo('url'); ?>/portfolio">Portfolio</a>
+                    
+                </li>
+            </ul>
         </div>
     </div>
     <header>
         <h3>
             <?php the_title(); ?>
             <a id="expand-portfolio" href="#">
-                <small class="pull-right">Expand <i class="fa fa-plus"></i></small>
+                <small class="pull-right">Expand &nbsp;&nbsp;<i class="fa fa-plus"></i></small>
             </a>
         </h3>
     </header>
@@ -45,12 +50,12 @@
                         foreach ($slides as $slide):
                     ?>
                         <?php if ($i==0): ?>
-                            <a class="boxer" data-gallery="gallery1" href="<?php echo($slide['slide']['url']); ?>">
+                            <a class="boxer" data-gallery="gallery1" href="<?php echo($slide['slide']['url']); ?>" title="<?php the_title(); ?>, <?php the_field('location');?>">
                                 <strong><i class="fa fa-caret-right"></i> <small>View Full Gallery</small></strong>
                             </a>
                        
                         <?php else: ?>
-                             <a href="<?php echo($slide['slide']['url']); ?>" class="boxer hide" data-gallery="gallery1"></a>
+                             <a href="<?php echo($slide['slide']['url']); ?>" title="<?php the_title(); ?>, <?php the_field('location');?>" class="boxer hide" data-gallery="gallery1"></a>
                         <?php endif; ?>    
                     <?php 
                         $i++;

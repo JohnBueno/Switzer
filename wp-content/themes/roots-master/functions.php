@@ -38,11 +38,6 @@ function the_breadcrumb() {
     global $post;
     echo '<ul id="breadcrumbs">';
     if (!is_home()) {
-        // echo '<li><a href="';
-        // echo get_option('home');
-        // echo '">';
-        // echo 'Home';
-        // echo '</a></li><li class="separator"> / </li>';
         if (is_category() || is_single()) {
             echo '<li>';
             the_category(' </li><li class="separator"> / </li><li> ');
@@ -53,20 +48,23 @@ function the_breadcrumb() {
             }
         } elseif (is_page()) {
             if($post->post_parent){
+                
                 $anc = get_post_ancestors( $post->ID );
                 $title = get_the_title();
                 foreach ( $anc as $ancestor ) {
-                    $output = '<li><a href="'.get_permalink($ancestor).'" title="'.get_the_title($ancestor).'">'.get_the_title($ancestor).'</a></li> <li class="separator">/</li>';
+                    
+                    if ($ancestor == 9) {
+                        $output = '<li><a href="'.get_permalink(11).'" title="'.get_the_title(9).'">'.get_the_title(9).'</a></li> <li class="separator">/</li>';
+                    }else{
+                        $output = '<li><a href="'.get_permalink($ancestor).'" title="'.get_the_title($ancestor).'">'.get_the_title($ancestor).'</a></li> <li class="separator">/</li>';    
+                    }
+                    
                 }
                 echo $output;
                 echo $title;
             } else {
-                if (get_the_title() == "About") {
-                    echo '<li>Overview</li>';
-                }else{
-                    echo '<li> '.get_the_title().'</li>';   
-                }
-                
+
+                echo '<li> '.get_the_title().'</li>';   
             }
         }
     }

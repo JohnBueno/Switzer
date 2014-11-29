@@ -1,5 +1,9 @@
 body{
 	font-family: @font-family-sans-serif;
+	background-color: #000;
+}
+body.portfolio, body.category{
+	background-color: #fff;
 }
 
 .content ul{
@@ -247,7 +251,7 @@ a:focus{
 
 
 .page-header{
-	margin-top: 28px;
+	margin-top: 30px;
 	border-bottom: none;
 	border-bottom: none;
 }
@@ -262,6 +266,12 @@ a:focus{
     font-size: 14px;
     li{
     	float:left;	
+    }
+    li:first-child{
+    	color: @brand-primary;
+    }
+    li a{
+    	color: @brand-primary !important;
     }
     .separator{
     	margin: 0 5px;
@@ -288,8 +298,9 @@ a:focus{
 	}
 	.dropdown-menu{
 		width: 100%;
+		left: 0;
 		margin-top: -1px;
-		padding: 0;
+		padding: 25px 0;
 		border-radius: 0;
 		border: none;
 		background: @gray-dark;
@@ -297,7 +308,7 @@ a:focus{
 		a{
 			color: #fff;
 			text-transform: uppercase;
-			padding: 5px 20px;
+			padding: 5px 30px;
 		}
 		a:hover{
 			background: @gray;
@@ -308,7 +319,7 @@ a:focus{
 }
 
 .portfolio-categories .col-md-3{ 
-	margin-bottom: (@grid-gutter-width/2);
+	margin-bottom: (@grid-gutter-width);
 	max-width: 430px;	
 	h4{
 		font-size: 16px;
@@ -330,9 +341,22 @@ a:focus{
 	}
 }
 
+.category .bg h4{
+	.opacity(0);
+	.transition(opacity 0.4s ease);
+}
+
+.category .category-title .bg h4{
+	.opacity(1);
+}
+
 .portfolio-categories .col-md-3{
 	.bg a:hover img{
 		.opacity(0.5);
+	}
+
+	.bg a:hover h4{
+		.opacity(1);
 	}
 }
 
@@ -414,16 +438,24 @@ a:focus{
 	.single-portfolio .links{
 		margin-top: 20px;
 	}
-	.single-portfolio h3 small{
-		cursor: pointer;
-		font-size: @font-size-small;
-		padding: 7px 0;
-		color:#000;
-		i{
-			padding: 1px 2px;
-			text-align: center;
-			background: @gray-dark;
-			color: #fff;
+	.single-portfolio h3{ 
+		color: @text-color;
+		small{
+			position: relative;
+			cursor: pointer;
+			font-size: @font-size-small;
+			padding: 5px 0;
+			color:#000;
+			i{
+				position: relative;
+				top: 0px;
+				width: 20px;
+				height: 20px;
+				padding: 4px 2px;
+				text-align: center;
+				background: #999;
+				color: #fff;
+			}
 		}
 	}
 	
@@ -544,7 +576,7 @@ a:focus{
 	}
 
 	.portfolio-dropdown{
-		padding-left: (@grid-gutter-width / 2);
+		left: (@grid-gutter-width / 2);
 	}
 }
 @media (min-width: @screen-lg-min)  {

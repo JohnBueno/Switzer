@@ -11,7 +11,7 @@
 	<div class="col-md-4 col-md-offset-6 col-sm-6 col-sm-offset-6">
 		<div class="page-header">
 			<div class="breadcrumbs">
-		  		Portfolio
+		  		<?php the_breadcrumb(); ?>
 		  	</div>
 		  	
 		</div>	
