@@ -13,11 +13,19 @@ Template Name: Contact Template
     
 </ul>
 <div class="shadow"></div>
+<div class="col-md-5 col-md-offset-6 col-sm-offset-6 col-sm-6 page">
+    <div class="extra-pad">
+            <?php while (have_posts()) : the_post(); ?>
+              <?php get_template_part('templates/page', 'header'); ?>
+    </div>
+</div>
+<div class="row mobile-img">
+    <img  class="img-responsive" src="<?php echo($slides[0]['slide']['sizes']['large']); ?>" alt="<?php the_title(); ?>">
+</div>
 <div class="col-md-5 col-md-offset-6 col-sm-offset-6 col-sm-6 single-col fixed-col page">
     <div class="extra-pad">
-        <?php while (have_posts()) : the_post(); ?>
-          <?php get_template_part('templates/page', 'header'); ?>
           <?php get_template_part('templates/content', 'page'); ?>
+
 
         <hr>
         <h5>Contact Information</h5>

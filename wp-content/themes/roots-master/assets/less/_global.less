@@ -43,6 +43,10 @@ ul.siblings{
 	}
 }
 
+.home .navbar-brand{
+	display: none;
+}
+
 .navbar-brand{
 	.light{
 		display: block;
@@ -59,6 +63,10 @@ ul.siblings{
 	.dark{
 		display: block;
 	}
+}
+
+.logo{
+	display: none;
 }
 
 .btn-close{
@@ -112,6 +120,12 @@ a:focus{
 	background-size: 20px;	
 }
 
+.mobile-img{
+
+	margin-top: -20px;
+	margin-bottom: 10px;
+}
+
 .gallery-biprev{
 	left: 0;
 	background-image: url(../img/previous.png);
@@ -140,18 +154,7 @@ a:focus{
 }
 
 
-.logo{
-	position: fixed;
-	width: 100%;
-	text-align: center;
-	top: 50%;
-	left: 0;
-	margin-top: -40px;
-	img{
-		width: 90%;
-		display: inline-block;
-	}
-}
+
 
 .shadow{
 	position: fixed;
@@ -173,10 +176,6 @@ a:focus{
 	height: 5000px;
 	z-index: -1;
 	margin-left: (@grid-gutter-width / 2)* -1;
-}
-
-.extra-pad{
-	padding: (@grid-gutter-width / 2);
 }
 
 .team-container{
@@ -364,13 +363,40 @@ a:focus{
 	display: none;
 }
 
+.extra-pad{
+	padding: 10px;
+}
+
+.team-img-lg .img-responsive{
+	display: inline-block !important;
+}
 
 @media (min-width: @screen-sm-min)  {
+	.home .navbar-brand{
+		display: block;
+	}
+	.logo{
+		display: block;
+		position: fixed;
+		width: 100%;
+		text-align: center;
+		top: 50%;
+		left: 0;
+		margin-top: -40px;
+		img{
+			width: 90%;
+			display: inline-block;
+		}
+	}
 	body{
 		background-color: #000;
 	}
 	body.portfolio, body.category{
 		background-color: #fff;
+	}
+
+	.extra-pad{
+		padding: (@grid-gutter-width / 2);
 	}
 
 	.mobile-img{
@@ -546,11 +572,11 @@ a:focus{
 	}
 
 	.team-col:after{
-		width: 470px;
+		width: 485px;
 	}
 
 	.single-col:after{
-		width: 392px;
+		width: 403px;
 	}
 
 	.page.fixed-col{
@@ -599,11 +625,11 @@ a:focus{
 	}
 
 	.single-col:after{
-		width: 475px;
+		width: 487px;
 	}
 
 	.team-col:after{
-		width: 570px;
+		width: 585px;
 	}
     
 }
