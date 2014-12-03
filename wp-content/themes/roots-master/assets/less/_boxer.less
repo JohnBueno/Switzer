@@ -208,6 +208,9 @@
 #boxer .boxer-meta {
   clear: both;
 }
+#boxer .boxer-control {
+  text-indent: 200%;
+}
 // #boxer .boxer-control {
 //   width: 40px;
 //   height: 40px;
@@ -311,7 +314,7 @@
   left: 0;
   background: #111111;
   border-radius: 0;
-  padding: 0 0 0;
+  padding: 40px 0 0;
 }
 #boxer.mobile .boxer-close,
 #boxer.mobile .boxer-close:hover {
@@ -376,9 +379,10 @@
   width: 100%;
   position: absolute;
   right: 0;
-  top:0;
+  bottom:0;
   left: 0;
   padding: 15px 65px;
+  background-color: #111111;
 }
 #boxer.mobile .boxer-position {
   color: #999999;
@@ -393,8 +397,6 @@
   padding: 0;
 }
 #boxer.mobile .boxer-image {
-  position: absolute; 
-  bottom: 0;
   -webkit-transition: none !important;
           transition: none !important;
   -webkit-transform: translate(0, 0);
