@@ -16,6 +16,7 @@ Template Name: Home Template
 </ul>
 
 <?php endwhile; ?>
+
 <div class="shadow"></div>
 <div class="logo">
 	<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/assets/img/home-logo.png" alt="">
@@ -28,3 +29,8 @@ Template Name: Home Template
 	<h4>EXPERIENCE THE VISION</h4>
 </div>
 
+<div id="cbp-bicontrols" style="position:absolute; z-index:200; display:none;" class="cbp-bicontrols">
+    <span class="cbp-biprev"></span>
+    <span id="cbp-bipause" class="cbp-bipause"></span>
+    <span class="cbp-binext"></span>
+</div>

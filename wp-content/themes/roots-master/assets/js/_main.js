@@ -50,7 +50,7 @@
                     }
                 });
 
-                cbpBGSlideshow.init();
+                cbpBGSlideshow.init(1);
 
                 $(".boxer").boxer({
                     mobile: true
@@ -70,10 +70,22 @@
         home: {
             init: function() {
                 // JavaScript to be fired on the home page
+
                 $slideshow = $('#cbp-bislideshow');
                 $slideshow.imagesLoaded(function() {
-                    $("body").addClass("animate").delay(5000).queue(function() {
+                    //$("#cbp-bipause").trigger("click");
+
+                    $("body").addClass("animate").delay(4000).queue(function() {
+                        
+                        //$("#cbp-bipause").trigger("click");
                         $(this).removeClass("animate").addClass('finish-animate').dequeue();
+                        $(this).delay(1500).queue(function(){
+                            $(this).addClass("show-celebrate").dequeue();
+                            $(this).delay(2500).queue(function(){
+                                $(this).removeClass("show-celebrate").dequeue();
+
+                            });
+                        });
                     });
                 });
 
