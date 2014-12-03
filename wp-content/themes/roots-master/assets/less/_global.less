@@ -99,17 +99,21 @@ a:focus{
 	display: block;
 }
 
+.mobile-portfolio{
+	position: relative;
+}
 .gallery-bipause{
 	display: none;
 }
+
 .gallery-biprev, .gallery-binext{
-	display: none;
+	position: absolute;
+	display: block;
 	cursor: pointer;
 	font-size: 56px;
 	top:50%;
 	margin-top: -30px;
 	color: #fff;
-	position: fixed;
 	background: rgba(0, 0, 0, 0.70);
 	line-height: 0;
 	width: 49px;
@@ -324,7 +328,9 @@ a:focus{
 		font-size: 16px;
 		position: absolute;
 		bottom: 5px;
-		left: (@grid-gutter-width/2);
+		left: 0;
+		padding-right: (@grid-gutter-width/2);
+		padding-left: (@grid-gutter-width/2);
 		color: #fff;
 		text-transform: uppercase;
 		font-family: @font-family-sans-serif;
@@ -341,7 +347,7 @@ a:focus{
 }
 
 .category .bg h4{
-	.opacity(0);
+	.opacity(1);
 	.transition(opacity 0.4s ease);
 }
 
@@ -371,7 +377,63 @@ a:focus{
 	display: inline-block !important;
 }
 
+.single-portfolio .breadcrumbs{
+	margin-bottom: 0px;
+}
+
+.single-portfolio .links{
+	margin-top: 20px;
+}
+.single-portfolio h3{ 
+	color: @text-color;
+	
+}
+
+.single-portfolio small{
+	position: relative;
+	cursor: pointer;
+	font-size: @font-size-small;
+	padding: 5px 0;
+	color:#000;
+	i{
+		position: relative;
+		top: 0px;
+		width: 20px;
+		height: 20px;
+		padding: 4px 2px;
+		text-align: center;
+		background: #999;
+		color: #fff;
+	}
+}
+
+.single-portfolio{
+	color: #000;
+	a{
+		color: #000;
+	}
+	a:hover{
+		color: @brand-primary;
+	}
+
+}
+.single-portfolio h5{
+	color: #000;
+	margin-bottom: 3px;
+}
+
+.expand-portfolio{
+	display: none;
+}
+
 @media (min-width: @screen-sm-min)  {
+	body{
+		background-color: #000;
+	}
+	body.portfolio, body.category{
+		background-color: #fff;
+	}
+
 	.home .navbar-brand{
 		display: block;
 	}
@@ -387,12 +449,6 @@ a:focus{
 			width: 90%;
 			display: inline-block;
 		}
-	}
-	body{
-		background-color: #000;
-	}
-	body.portfolio, body.category{
-		background-color: #fff;
 	}
 
 	.extra-pad{
@@ -413,7 +469,7 @@ a:focus{
 
 	}
 	.portfolio-categories .category-thumbs{
-		margin-top: 150px;
+		margin-top: 162px;
 	}
 
 	.portfolio-fixed{
@@ -443,12 +499,17 @@ a:focus{
 		}		
 	}
 
+	.category .bg h4{
+		.opacity(0);
+	}
+
 	.breadcrumbs{
 		margin-bottom: 80px;
 	}
 
 	.cbp-bislideshow, .shadow, .gallery-biprev, .gallery-binext{
 		display: block;
+		position: fixed;
 	}
 	
 
@@ -468,47 +529,8 @@ a:focus{
 		background: rgba(255, 255, 255, 0.85);
 	}
 
-	.single-portfolio .breadcrumbs{
-		margin-bottom: 0px;
-	}
-	
-	.single-portfolio .links{
-		margin-top: 20px;
-	}
-	.single-portfolio h3{ 
-		color: @text-color;
-		small{
-			position: relative;
-			cursor: pointer;
-			font-size: @font-size-small;
-			padding: 5px 0;
-			color:#000;
-			i{
-				position: relative;
-				top: 0px;
-				width: 20px;
-				height: 20px;
-				padding: 4px 2px;
-				text-align: center;
-				background: #999;
-				color: #fff;
-			}
-		}
-	}
-	
-	.single-portfolio{
-		color: #000;
-		a{
-			color: #000;
-		}
-		a:hover{
-			color: @brand-primary;
-		}
-
-	}
-	.single-portfolio h5{
-		color: #000;
-		margin-bottom: 3px;
+	.single-portfolio h3{
+		margin-top: 0;
 	}
 	
 	.single-portfolio .entry-content{
@@ -522,6 +544,10 @@ a:focus{
 	
 	.single-portfolio .entry-content .dropdown.fade-in{
 		.opacity(1);
+	}
+
+	.expand-portfolio{
+		display: block;
 	}
 
 }
@@ -588,7 +614,6 @@ a:focus{
 		color: #fff;
 		position: fixed;
 		height: 30px;
-		
 		margin: -50px 0 0 0px;
 		bottom: -50px;
 		left: 42px;
