@@ -86,6 +86,12 @@ html, body{
 	}
 }
 
+.portfolio .open-sidenav, .category .open-sidenav{
+	&:hover{
+		color: @brand-primary;
+	}
+}
+
 .side-nav
 {
 	height: 100%;
@@ -165,7 +171,9 @@ html, body{
 		min-height: 0;
 	}
 	
-	.portfolio .top-nav .navbar-toggle{
+	.portfolio .top-nav .navbar-toggle,
+	.category .top-nav .navbar-toggle
+	{
 		display: none;
 	}
 
@@ -288,7 +296,9 @@ html, body{
 }
 
 @media (min-width: @screen-md-min)  {
-	.portfolio .top-nav .navbar-toggle{
+	.portfolio .top-nav .navbar-toggle,
+	.category .top-nav .navbar-toggle
+	{
 		display: block;
 	}
 	.hide-overflow{
