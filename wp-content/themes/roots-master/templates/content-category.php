@@ -21,9 +21,10 @@
 
 			// The Query
 			$query = new WP_Query( $args );
-
+            $count = $query->post_count;
 			// The Loop
 			if ( $query->have_posts() ):
+                $i = 1;
 				while ( $query->have_posts() ):
 					$query->the_post();
 		?>						
@@ -48,5 +49,15 @@
 			endif;
 			wp_reset_postdata();
 		?>
+        <?php 
+            $blanks = 12 - $count; 
+            for ($x = 1; $x < $blanks; $x++):
+        ?>
+            <div class="col-md-3 col-sm-4 blank">
+                <img class="img-responsive" src="<?php bloginfo('template_url') ?>/assets/img/blank.gif" alt="">
+            </div>
+        <?php
+            endfor; 
+        ?>
 	</div>
 </div>

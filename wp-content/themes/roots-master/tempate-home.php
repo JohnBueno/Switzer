@@ -20,6 +20,9 @@ Template Name: Home Template
 <div class="logo">
 	<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/assets/img/home-logo.png" alt="">
 </div>
+<div class="celebrate">
+    <img class="img-responsive" src="<?php bloginfo('template_url'); ?>/assets/img/switzer_40yrs.png" alt="">
+</div>
 
 <div class="experience">
 	<h4>EXPERIENCE THE VISION</h4>

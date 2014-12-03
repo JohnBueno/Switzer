@@ -65,7 +65,7 @@ ul.siblings{
 	}
 }
 
-.logo{
+.logo, .celebrate{
 	display: none;
 }
 
@@ -437,6 +437,9 @@ a:focus{
 	.home .navbar-brand{
 		display: block;
 	}
+	.celebrate{
+		display: none;
+	}
 	.logo{
 		display: block;
 		position: fixed;
@@ -450,6 +453,7 @@ a:focus{
 			display: inline-block;
 		}
 	}
+	
 
 	.extra-pad{
 		padding: (@grid-gutter-width / 2);
@@ -566,6 +570,10 @@ a:focus{
 		}
 	}
 
+	.celebrate img{
+		width: 850px;
+	}
+
 	.portfolio .navbar-brand .invert{
 		.light{
 			display: block;
@@ -628,7 +636,7 @@ a:focus{
 		.transition(bottom 2.8s ease);
 	}
 
-	.logo {
+	.logo, .celebrate{
 		.opacity(0);
 		.transition(opacity 2.0s ease);
 	}
