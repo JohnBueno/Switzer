@@ -26,7 +26,7 @@ var cbpBGSlideshow = (function() {
 		// true if the slideshow is active
 		isSlideshowActive = true,
 		// it takes 3.5 seconds to change the background image
-		interval = 8600;
+		interval = 7000;
 
 	function init( config ) {
 
