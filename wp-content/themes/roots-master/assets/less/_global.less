@@ -556,16 +556,21 @@ a:focus{
 	header .container{
 		width: 100%;
 	}
-
-	.team-imgs .headshot{
-
-		float: right;
-		width: 31.3%;
-		img{
-			width: 100%;
-			position: relative;
+	
+	.team-imgs{
+		left: 39px;
+		.headshot{
+			width: 31.3%;
+			img{
+				width: 100%;
+				position: relative;
+			}
+		}
+		.headshot-7{
+			margin-left: 31.3%;
 		}
 	}
+
 
 	.team-col:after{
 		width: 485px;
@@ -584,7 +589,9 @@ a:focus{
 	}
 }
 @media (min-width: @screen-lg-min)  {
-
+	.team-imgs{
+		left: 47px;
+	}
 	.wrap{
 		width: @container-lg;
 	}
