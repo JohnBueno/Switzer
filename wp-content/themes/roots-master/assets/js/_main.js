@@ -85,7 +85,7 @@ function openPortfolio() {
                 setTimeout(function() {
                     console.log('trigger slides');
                     $("#cbp-bipause").trigger("click");
-                }, 5500);
+                }, 5100);
 
                 $slideshow = $('#cbp-bislideshow');
                 $slideshow.imagesLoaded(function() {
