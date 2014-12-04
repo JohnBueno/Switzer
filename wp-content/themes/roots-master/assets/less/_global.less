@@ -160,6 +160,9 @@ a:focus{
 	padding-left: 0;
 }
 .team-imgs{
+	position: relative;
+	left: -1px;
+	top: -10px;
 	clear: both;
 }
 .team-imgs .headshot{
@@ -167,6 +170,7 @@ a:focus{
 	background: @brand-primary;
 	padding-left: 0;
 	padding-right: 0;
+	display: table;
 	img{
 		.opacity(1);
 		.transition(opacity 0.4s ease);
@@ -556,9 +560,10 @@ a:focus{
 	.team-imgs .headshot{
 
 		float: right;
-		width: 31.2%;
+		width: 31.3%;
 		img{
 			width: 100%;
+			position: relative;
 		}
 	}
 
