@@ -92,13 +92,14 @@
         </article>
     </div>
 </div>
+<a href="<?php echo($slides[0]['slide']['sizes']['large']); ?>" data-gallery="gallery2" class="background-boxer boxer visible-sm-md-lg"></a>
 
 <div class="mobile-portfolio">
     <div style="margin:0;" class="row mobile-img">
         <img  class="img-responsive" src="<?php echo($slides[0]['slide']['sizes']['large']); ?>" alt="<?php the_title(); ?>">
     </div>
 
-    <div id="gallery-bicontrols" class="gallery-bicontrols">
+    <div id="gallery-bicontrols boxer" class="gallery-bicontrols">
     <?php
         $i = 1; 
         foreach ($slides as $slide):
@@ -117,5 +118,6 @@
         
     </div>
 </div>
+
 
 <?php endwhile; ?>
