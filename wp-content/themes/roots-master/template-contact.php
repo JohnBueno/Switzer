@@ -45,7 +45,7 @@ Template Name: Contact Template
         <?php if ($maplink = get_field('google_maps_link')): ?>
             <div class="row">
                 <div class="col-sm-12">
-                    <a href="<?php the_field('google_maps_link'); ?>">
+                    <a target="_blank" href="<?php the_field('google_maps_link'); ?>">
                         <i class="fa fa-caret-right"></i>
                         Map & Directions via Google Maps
                     </a>
