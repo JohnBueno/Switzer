@@ -43,10 +43,6 @@ ul.siblings{
 	}
 }
 
-.home .navbar-brand{
-	display: none;
-}
-
 .navbar-brand{
 	.light{
 		display: block;
@@ -65,10 +61,6 @@ ul.siblings{
 	}
 }
 
-.logo, .celebrate{
-	display: none;
-}
-
 .btn-close{
 	img{
 		width: 13px;	
@@ -83,9 +75,6 @@ a:focus{
 	outline: none;
 }
 
-.experience{
-	display: none;
-}
 
 .fa-caret-right{
 	color: @brand-primary;
@@ -93,10 +82,6 @@ a:focus{
 
 .cbp-bislideshow, .shadow{
 		display: none;
-}
-
-.home .cbp-bislideshow, .home .shadow{
-	display: block;
 }
 
 .mobile-portfolio{
@@ -138,27 +123,6 @@ a:focus{
 	right: 0;
 	background-image: url(../img/next.png);
 }
-
-.boxer-control{
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: 20px;	
-	height: 100%;
-	top: 0px;
-	position: fixed;
-}
-.boxer-control.next{
-	right: 0;
-	background-image: url(../img/next.png);
-}
-
-.boxer-control.previous{
-	left: 0;
-	background-image: url(../img/previous.png);
-}
-
-
-
 
 .shadow{
 	position: fixed;
@@ -251,7 +215,13 @@ a:focus{
 	margin-top: 20px;
 }
 
-
+.background-boxer{
+	position: fixed;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
 
 .page-header{
 	margin-top: 30px;
@@ -377,6 +347,9 @@ a:focus{
 	display: inline-block !important;
 }
 
+.single-portfolio{
+	z-index: 5;
+}
 .single-portfolio .breadcrumbs{
 	margin-bottom: 0px;
 }
@@ -433,25 +406,6 @@ a:focus{
 	body.portfolio, body.category{
 		background-color: #fff;
 	}
-
-	.home .navbar-brand{
-		display: block;
-	}
-
-	.logo, .celebrate{
-		display: block;
-		position: fixed;
-		width: 100%;
-		text-align: center;
-		top: 50%;
-		left: 0;
-		margin-top: -40px;
-		img{
-			width: 90%;
-			display: inline-block;
-		}
-	}
-	
 
 	.extra-pad{
 		padding: (@grid-gutter-width / 2);
@@ -555,23 +509,6 @@ a:focus{
 }
 @media (min-width: @screen-md-min)  {
 
-	.logo{
-		position: fixed;
-		width: 100%;
-		text-align: center;
-		top: 50%;
-		left: 0;
-		margin-top: -40px;
-		img{
-			width: 860px;
-			display: inline-block;
-		}
-	}
-
-	.celebrate img{
-		width: 850px;
-	}
-
 	.portfolio .navbar-brand .invert{
 		.light{
 			display: block;
@@ -615,46 +552,12 @@ a:focus{
 		padding-bottom: 50px;
 	}
 
-	.experience{
-		display: inline-block;
-		color: #fff;
-		position: fixed;
-		height: 30px;
-		margin: -50px 0 0 0px;
-		bottom: -50px;
-		left: 42px;
-		border-top: 1px solid #fff;
-		h4{
-			font-size: 16px;
-		}
-	}
-
-	.finish-animate .experience{
-		bottom: 15px;
-		.transition(bottom 2.8s ease);
-	}
-
-	.logo, .celebrate{
-		.opacity(0);
-		.transition(opacity 2.0s ease);
-	}
-
-	.animate .logo{
-		.opacity(1);	
-	}
-	
-	.show-celebrate .celebrate{
-		.opacity(1);
-	}
-
 	.portfolio-dropdown{
 		left: (@grid-gutter-width / 2);
 	}
 }
 @media (min-width: @screen-lg-min)  {
-	// .category-thumbs .blank img{
-	// 	min-height: 182px;
-	// }
+
 	.wrap{
 		width: @container-lg;
 	}

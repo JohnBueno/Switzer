@@ -1,0 +1,98 @@
+.home .navbar-brand{
+	display: none;
+}
+
+.logo, .celebrate{
+	display: none;
+}
+
+.experience{
+	display: none;
+}
+
+.home .cbp-bislideshow, .home .shadow{
+	display: block;
+}
+
+@media (min-width: @screen-sm-min)  {
+
+	.home .navbar-brand{
+		display: block;
+	}
+
+	.logo, .celebrate{
+		display: block;
+		position: fixed;
+		width: 100%;
+		text-align: center;
+		top: 50%;
+		left: 0;
+		margin-top: -40px;
+		img{
+			width: 90%;
+			display: inline-block;
+		}
+	}
+
+	.celebrate{
+		display: none;
+	}
+
+}
+
+@media (min-width: @screen-md-min)  {
+
+	.logo{
+		position: fixed;
+		width: 100%;
+		text-align: center;
+		top: 50%;
+		left: 0;
+		margin-top: -40px;
+		img{
+			width: 860px;
+			display: inline-block;
+		}
+	}
+
+	.celebrate img{
+		width: 850px;
+	}
+
+	.experience{
+		display: inline-block;
+		color: #fff;
+		position: fixed;
+		height: 30px;
+		margin: -50px 0 0 0px;
+		bottom: -50px;
+		left: 42px;
+		border-top: 1px solid #fff;
+		h4{
+			font-size: 16px;
+		}
+	}
+
+	.finish-animate .experience{
+		bottom: 15px;
+		.transition(bottom 2.8s ease);
+	}
+
+	.logo, .celebrate{
+		.opacity(0);
+		.transition(opacity 2.0s ease);
+	}
+
+	.animate .logo{
+		.opacity(1);	
+	}
+	
+	.show-celebrate .celebrate{
+		.opacity(1);
+	}
+
+}
+
+@media (min-width: @screen-lg-min)  {
+
+}
