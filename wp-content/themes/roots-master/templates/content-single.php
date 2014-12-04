@@ -1,7 +1,7 @@
 
 <?php while (have_posts()) : the_post(); ?>
 <div class="col-md-5 col-md-offset-6 col-sm-6 col-sm-offset-6 single-portfolio">
-    <div class="extra-pad">
+    <div id="trigger-open" class="extra-pad">
         <article <?php post_class(); ?>>
             <div class="page-header">
                 <div class="breadcrumbs">
@@ -29,7 +29,7 @@
             </header>
             <div class="entry-content">
                 <div class="dropdown">
-                <hr>
+                <hr class="visible-xs">
                 <?php the_content(); ?>
                 <div class="row">
                     <div class="col-xs-6">
@@ -44,7 +44,7 @@
                 <div class="row">
                     <div class="col-xs-6">
                         <h5>Project Type</h5>
-                        <?php the_category(' '); ?>
+                        <?php the_category('<br/>'); ?>
                     </div>
                     <div class="col-xs-6">
                         <h5>Status</h5>
@@ -92,7 +92,7 @@
         </article>
     </div>
 </div>
-<a href="<?php echo($slides[0]['slide']['sizes']['large']); ?>" data-gallery="gallery2" class="background-boxer boxer visible-sm-md-lg"></a>
+<a href="<?php echo($slides[0]['slide']['sizes']['large']); ?>" data-gallery="gallery2" class="background-boxer boxer hidden-xs"></a>
 
 <div class="mobile-portfolio">
     <div style="margin:0;" class="row mobile-img">
