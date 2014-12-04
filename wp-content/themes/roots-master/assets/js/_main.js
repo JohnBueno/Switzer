@@ -14,6 +14,22 @@
  * remove or comment out: add_theme_support('jquery-cdn');
  * ======================================================================== */
 
+function openPortfolio() {
+    if ($('#expand-portfolio').hasClass('open')) {
+        $('#expand-portfolio').html('<small class="pull-right">Expand &nbsp;<i class="fa fa-plus"></i></small>');
+        $('#expand-portfolio').removeClass('open');
+        $('.entry-content .dropdown').removeClass('fade-in');
+        $('.entry-content').slideUp(200);
+    } else {
+        $('#expand-portfolio').addClass('open');
+        $('#expand-portfolio').html('<small class="pull-right">Collapse &nbsp;<i class="fa fa-minus"></i></small>');
+
+        $('.entry-content').slideDown(200, function() {
+            $(this).find('.dropdown').addClass('fade-in');
+        });
+    }
+}
+
 (function($) {
 
     // Use this variable to set up the common and page specific functions. If you 
@@ -33,21 +49,17 @@
                     $(this).find('.dropdown-menu').first().fadeOut();
                 });
 
+                $('#trigger-open').on('click', function(e) {
+                    console.log(e.target);
+                    if (!$(e.target).is('small') && !$(e.target).is('i')) {
+                        e.preventDefault();
+                        openPortfolio();
+                    }
+                });
+
                 $('#expand-portfolio').on('click', function(e) {
                     e.preventDefault();
-                    if ($(this).hasClass('open')) {
-                        $(this).html('<small class="pull-right">Expand <i class="fa fa-plus"></i></small>');
-                        $(this).removeClass('open');
-                        $('.entry-content .dropdown').removeClass('fade-in');
-                        $('.entry-content').slideUp(200);
-                    } else {
-                        $(this).addClass('open');
-                        $(this).html('<small class="pull-right">Collapse <i class="fa fa-minus"></i></small>');
-
-                        $('.entry-content').slideDown(200, function() {
-                            $(this).find('.dropdown').addClass('fade-in');
-                        });
-                    }
+                    openPortfolio();
                 });
 
                 cbpBGSlideshow.init(1);
@@ -56,12 +68,12 @@
                     mobile: true
                 });
 
-                $(".toggle-sidenav").on('click', function(e){
+                $(".toggle-sidenav").on('click', function(e) {
                     e.preventDefault();
                     $('#side-nav').toggleClass('open');
                 });
 
-                $(".navbar-toggle").on('click', function(e){
+                $(".navbar-toggle").on('click', function(e) {
                     $('.top-nav').find('.navbar-brand').toggleClass('invert');
                 });
             }
@@ -69,30 +81,41 @@
         // Home page
         home: {
             init: function() {
-                // JavaScript to be fired on the home page
+
+                setTimeout(function() {
+                    console.log('trigger slides');
+                    $("#cbp-bipause").trigger("click");
+                }, 5500);
 
                 $slideshow = $('#cbp-bislideshow');
                 $slideshow.imagesLoaded(function() {
-                    //$("#cbp-bipause").trigger("click");
 
-                    $("body").addClass("animate").delay(4000).queue(function() {
-                        
-                        //$("#cbp-bipause").trigger("click");
-                        $(this).removeClass("animate").addClass('finish-animate').dequeue();
-                        $(this).delay(1500).queue(function(){
-                            $(this).addClass("show-celebrate").dequeue();
-                            $(this).delay(2500).queue(function(){
-                                $(this).removeClass("show-celebrate").dequeue();
+                    $("#cbp-bipause").trigger("click");
+
+                    $("body").delay(1000).queue(function() {
+
+                        $(this).addClass("animate-1").dequeue();
+                        $(this).delay(4000).queue(function() {
+                            
+                            $(this).removeClass("animate-1").dequeue();
+                            $(this).delay(1000).queue(function() {
+                                $(this).addClass("animate-2").dequeue();
+                                $(this).delay(4000).queue(function() {
+                                    $(this).removeClass("animate-2").dequeue();
+                                    $(this).delay(1000).queue(function() {
+                                        $(this).addClass("animate-3").dequeue();    
+                                    }); 
+                                });
 
                             });
                         });
+
                     });
+
                 });
-
-
-
             }
         }
+
     };
 
     // The routing fires all common scripts, followed by the page specific scripts.
