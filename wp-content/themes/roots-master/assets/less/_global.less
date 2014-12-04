@@ -6,6 +6,10 @@ body.portfolio, body.category{
 	background-color: #fff;
 }
 
+h4, h5{
+	font-family: @font-family-sans-serif;
+}
+
 .content ul{
 	padding-left: 15px;
 	font-size: @font-size-small;
@@ -59,6 +63,11 @@ ul.siblings{
 	.dark{
 		display: block;
 	}
+}
+
+.contact textarea{
+	resize: none;
+	height: 140px;
 }
 
 .btn-close{
@@ -223,6 +232,15 @@ a:focus{
 	z-index: 1;
 }
 
+.trigger-open{
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
 .page-header{
 	margin-top: 30px;
 	border-bottom: none;
@@ -312,6 +330,8 @@ a:focus{
 		img{
 			.opacity(1);
 			.transition(opacity 0.4s ease);
+			-webkit-backface-visibility: hidden;
+    		-webkit-transform: translateZ(0) scale(1.0, 1.0);
 		}
 	}
 }
@@ -341,6 +361,7 @@ a:focus{
 
 .extra-pad{
 	padding: 10px;
+
 }
 
 .team-img-lg .img-responsive{
@@ -349,6 +370,7 @@ a:focus{
 
 .single-portfolio{
 	z-index: 5;
+	position: relative;
 }
 .single-portfolio .breadcrumbs{
 	margin-bottom: 0px;
