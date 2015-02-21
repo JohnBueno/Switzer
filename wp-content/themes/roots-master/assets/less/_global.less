@@ -144,16 +144,9 @@ a:focus{
 	background-repeat: repeat-x;
 }
 
-.fixed-col:after{
+.white-bg{
 	background: #fff;
 	background: rgba(255, 255, 255, 0.85);
-	position: fixed;
-	top: 0;
-	content: "";
-	display: block;
-	height: 5000px;
-	z-index: -1;
-	margin-left: (@grid-gutter-width / 2)* -1;
 }
 
 .team-container{
@@ -500,9 +493,6 @@ a:focus{
 		color: #484848;
 	}
 
-	.single-col:after, .team-col:after{
-		width: 100%;
-	}
 	.wrap{
 		padding-left: 0;
 		padding-right: 0;
@@ -572,15 +562,6 @@ a:focus{
 		}
 	}
 
-
-	.team-col:after{
-		width: 485px;
-	}
-
-	.single-col:after{
-		width: 403px;
-	}
-
 	.page.fixed-col{
 		padding-bottom: 50px;
 	}
@@ -595,14 +576,6 @@ a:focus{
 	}
 	.wrap{
 		width: @container-lg;
-	}
-
-	.single-col:after{
-		width: 487px;
-	}
-
-	.team-col:after{
-		width: 585px;
 	}
     
 }
