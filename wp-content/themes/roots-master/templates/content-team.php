@@ -3,7 +3,7 @@
 	<?php 
 		// WP_Query arguments
 		$args = array (
-			'post_type'		=> 'team',
+			'post_type'	=> 'team',
 		);
 
 		// The Query
