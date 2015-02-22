@@ -14,27 +14,20 @@ Template Name: Team Template
 </ul>
 <div class="shadow"></div>
 	<?php while (have_posts()) : the_post(); ?>
-		<div class="col-md-5 col-xs-12 col-md-offset-6 col-sm-offset-6 col-sm-6 single-col fixed-col">
+    
+        <div class="col-md-5 col-xs-12 col-md-offset-6 col-sm-offset-6 col-sm-6">
             <div class="extra-pad">
-  			   <?php get_template_part('templates/page', 'header'); ?>
+                <div class="page-header">
+                    <div class="breadcrumbs">
+                        <?php the_breadcrumb(); ?>
+                    </div>
+                </div>
             </div>
-  		</div>
-
-		<div class="team-container col-xs-12 col-md-8 col-md-offset-3 col-sm-offset-6 col-sm-6">
-			<?php get_template_part('templates/content', 'team'); ?>
-		</div>
+        </div>
+    ]
+                
+	<?php get_template_part('templates/content', 'team'); ?>
   		
-
-		<div class="col-xs-12 col-md-5 col-md-offset-6 col-sm-offset-6 col-sm-6">
-            <div class="extra-pad">
-    	  		<ul class="siblings">
-    			  <?php
-    			  $parent = $post->post_parent;
-    			  wp_list_pages("title_li=&child_of=$parent&show_date=modified
-    			  &date_format=$date_format"); ?>
-    			</ul>
-            <div class="extra-pad">
-		</div>
 	<?php endwhile; ?>
 </div>
 

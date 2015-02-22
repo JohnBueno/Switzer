@@ -18,7 +18,7 @@
 	<?php $image = get_field('headshot'); ?>
 
 
-	<div class="col-md-4 col-sm-6 col-xs-6 headshot headshot-<?php echo($i); ?>"> 
+	<div class="col-md-3 headshot headshot-<?php echo($i); ?>"> 
 		<a href="<? the_permalink(); ?>">
 		<img class="img-responsive" src="<?php echo($image['sizes']['portfolio-thumbail']); ?>" alt="<?php the_title(); ?>">
 		<span class="name">
