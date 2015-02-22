@@ -154,7 +154,33 @@ html, body{
 }
 
 
+.header-fixed{
+	top: 0;
+	position:relative; 
+	width:100%;
+	left: 0;
+	background: #000;
+	z-index: 1;
+}
+
 @media (min-width: @screen-sm-min)  {
+
+.header-fixed{
+		position:fixed; 
+		.col-md-offset-6{
+			background: @gray-light;
+			padding-left: 0;
+			padding-right: 0;
+			.page-header{
+				margin-top: 40px;
+				padding-left: (@grid-gutter-width / 2);
+			}
+			.portfolio-dropdown{
+				width: 100%;
+			}
+		}
+	}
+
 	.hide-overflow{
 		padding-bottom: 0;
 	}
@@ -194,16 +220,6 @@ html, body{
 		margin-right: 25px;
 		color: #fff;
 		border: none;
-	}
-
-	.portfolio .top-nav .navbar-toggle,
-	.category .top-nav .navbar-toggle
-	{
-		color: @gray-dark;
-		border: none;
-		&:hover{
-			color: @brand-primary;
-		}
 	}
 
 	.top-nav .dropdown-menu{
@@ -287,6 +303,11 @@ html, body{
 }
 
 @media (min-width: @screen-md-min)  {
+	
+	.header-fixed .col-md-offset-6{
+		background: transparent;
+	}
+
 	.portfolio .top-nav .navbar-toggle,
 	.category .top-nav .navbar-toggle
 	{

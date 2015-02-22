@@ -54,14 +54,14 @@ function the_breadcrumb() {
                 foreach ( $anc as $ancestor ) {
                     
                     if ($ancestor == 9) {
-                        $output = '<li><a href="'.get_permalink(11).'" title="'.get_the_title(9).'">'.get_the_title(9).'</a></li> <li class="separator">/</li>';
+                        $output = '<li><a href="'.get_permalink(11).'" title="'.get_the_title(9).'">'.get_the_title(9).'</a></li> <li class="separator">|</li>';
                     }else{
-                        $output = '<li><a href="'.get_permalink($ancestor).'" title="'.get_the_title($ancestor).'">'.get_the_title($ancestor).'</a></li> <li class="separator">/</li>';    
+                        $output = '<li><a href="'.get_permalink($ancestor).'" title="'.get_the_title($ancestor).'">'.get_the_title($ancestor).'</a></li> <li class="separator">|</li>';    
                     }
                     
                 }
                 echo $output;
-                echo $title;
+                echo '<li>'.$title.'</li>';
             } else {
 
                 echo '<li> '.get_the_title().'</li>';   

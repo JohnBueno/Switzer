@@ -6,10 +6,6 @@ body.portfolio, body.category{
 	position: relative;
 }
 
-.portfolio-categories .breadcrumbs{
-	margin-bottom: 20px;
-}
-
 .portfolio-categories .portfolio-dropdown{
 	width: 100%;
 	button{
@@ -45,21 +41,14 @@ body.portfolio, body.category{
 	}
 }
 
-.portfolio-fixed{
-	top: 0;
-	position:relative; 
-	width:100%;
-	left: 0;
-	background: #000;
-	z-index: 1;
-}
+
 
 .portfolio-categories .category-thumbs{
 	margin-top: 20px;
+	margin-bottom: 60px;
 }
 
 .portfolio-categories .col-md-3{ 
-	margin-bottom: (@grid-gutter-width);
 	max-width: 430px;	
 	h4{
 		font-size: 16px;
@@ -143,24 +132,7 @@ body.portfolio, body.category{
 
 	body.portfolio, body.category{
 		background-color: #fff;
-	}
-	
-
-	.portfolio-fixed{
-		position:fixed; 
-		.col-md-offset-6{
-			background: @gray-light;
-			padding-left: 0;
-			padding-right: 0;
-			.page-header{
-				margin-top: 40px;
-				padding-left: (@grid-gutter-width / 2);
-			}
-			.portfolio-dropdown{
-				width: 100%;
-			}
-		}
-	}
+	}	
 
 	.category-thumbs .blank{
 		display: block;
@@ -172,7 +144,10 @@ body.portfolio, body.category{
 
 	}
 	.portfolio-categories .category-thumbs{
-		margin-top: 162px;
+		margin-top: 200px;
+		.col-md-3{
+			padding: 5px;
+		}
 	}
 
 	.category .bg h4{
@@ -211,9 +186,7 @@ body.portfolio, body.category{
 }
 
 @media (min-width: @screen-md-min)  {
-	.portfolio-fixed .col-md-offset-6{
-		background: transparent;
-	}
+	
 
 	.portfolio-dropdown{
 		left: (@grid-gutter-width / 2);
