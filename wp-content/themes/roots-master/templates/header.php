@@ -4,7 +4,6 @@
             <div class="navbar-header">
                 
                 <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
-                    <img class="img-responsive dark" src="<?php bloginfo('template_url'); ?>/assets/img/hdr-logo-dark.png" alt="<?php bloginfo('name'); ?>">
                     <img class="img-responsive light" src="<?php bloginfo('template_url'); ?>/assets/img/hdr-logo.png" alt="<?php bloginfo('name'); ?>">
                 </a>
 
