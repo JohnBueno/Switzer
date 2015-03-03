@@ -98,6 +98,7 @@ function openPortfolio() {
                 //     console.log('clicked');
                 // });
 
+
                 $slideshow.imagesLoaded(function() {
 
                     $("body").delay(1000).queue(function() {
