@@ -7,6 +7,12 @@ h4, h5{
 	font-family: @font-family-sans-serif;
 }
 
+h5{
+	color: #000;
+	text-transform: uppercase;
+	font-weight: 800;
+}
+
 .content ul{
 	padding-left: 15px;
 	font-size: @font-size-small;
@@ -176,12 +182,14 @@ a:focus{
     	color: @brand-primary;
     }
 
-	li:last-child{
-    	color: #fff !important;
-    }
-
     .separator{
     	margin: 0 5px;
+    }
+}
+
+.header-fixed{
+	.breadcrumbs li:last-child{
+    	color: #fff !important;
     }
 }
 
@@ -222,7 +230,21 @@ footer{
 	text-transform: uppercase;
 	color: #fff;
 	padding: 25px;
+	position: relative;
 }
+
+// footer .bottom{
+// 	background: #000;
+// 	background-color: rgba(0, 0, 0, 0.5);
+// 	position: fixed;
+// 	bottom: 0px;
+// 	left: 0;
+// 	width: 100%;
+// 	content: "";
+// 	display: block;
+// 	height: 5000px;
+// 	z-index: -1;
+// }
 
 @media (min-width: @screen-sm-min)  {
 	body{
@@ -270,7 +292,7 @@ footer{
 	}
 
 	.white-bg{
-		min-height: 600px;
+		//min-height: 800px;
 	}
 }
 @media (min-width: @screen-lg-min)  {

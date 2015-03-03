@@ -23,24 +23,23 @@
             </div>
             
             <div class="row">
-                
-                <?php if($image = get_field('headshot')): ?>
-                    <div class="col-sm-6">
+                <div class="col-xs-12">
+                    <div class="row">
                         <div class="extra-pad">
-                            <img class="img-responsive" src="<?php echo($image['sizes']['team']); ?>" alt="<?php the_title(); ?>">
+                            <?php if($image = get_field('headshot')): ?>
+                            <div class="col-sm-6">
+                                <img class="img-responsive" src="<?php echo($image['sizes']['large']); ?>" alt="<?php the_title(); ?>">
+                            </div>
+                        <?php endif; ?> 
+                        <div class="col-sm-6">
+                            <h4 class="entry-title"><?php the_title(); ?></h4>
+                            <h5><?php the_field('job_title'); ?></h5>
+                        </div>
                         </div>
                     </div>
-                <?php endif; ?> 
-                <div class="col-sm-6">
-                    <div class="extra-pad">
-                        <h4 class="entry-title"><?php the_title(); ?></h4>
-                    </div>
                 </div>
+                
             </div>
-            
-
-            
-            
 
             <div class="entry-content">
                 <div class="extra-pad">

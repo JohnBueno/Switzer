@@ -13,10 +13,11 @@ Template Name: Team Template
     
 </ul>
 <div class="shadow"></div>
-	<?php while (have_posts()) : the_post(); ?>
+
+<?php while (have_posts()) : the_post(); ?>
     <?php get_template_part('templates/fixed', 'header'); ?>
-	<?php get_template_part('templates/content', 'team'); ?>
-  		
-	<?php endwhile; ?>
-</div>
+    <?php get_template_part('templates/content', 'team'); ?>
+
+<?php endwhile; ?>
+
 

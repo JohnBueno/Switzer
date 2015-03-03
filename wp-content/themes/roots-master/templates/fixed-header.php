@@ -1,4 +1,3 @@
-
 <div class="header-fixed"> 
     <div class="col-md-4 col-md-offset-6 col-sm-6 col-sm-offset-6">
         <div class="page-header">
