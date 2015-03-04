@@ -4,7 +4,7 @@
 	<div class="row">
 		<div class="col-md-3 col-sm-4 category-title">
             <div class="bg">
-			<img class="img-responsive" src="<?php bloginfo('template_url') ?>/assets/img/category-title-bg.gif" alt="<?php echo roots_title(); ?>">
+			<img class="img-responsive" src="<?php bloginfo('template_url') ?>/assets/img/blank.gif" alt="<?php echo roots_title(); ?>">
 			<h4><?php echo roots_title(); ?></h4>
             </div>
 		</div>
@@ -36,7 +36,7 @@
 					<?php if ($image = get_field('thumb')): ?>
 						<img class="img-responsive" src="<?php echo($image['sizes']['portfolio-thumbail']); ?>" alt="<?php the_title(); ?>">
 					<?php else: ?>				
-						<img class="img-responsive" src="<?php bloginfo('template_url') ?>/assets/img/category-title-bg.gif" alt="">
+						<img class="img-responsive" src="<?php bloginfo('template_url') ?>/assets/img/blank.gif" alt="">
 					<?php endif; ?>
 					<h4><?php the_title(); ?></h4>
 				</a>

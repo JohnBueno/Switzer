@@ -40,9 +40,9 @@ function the_breadcrumb() {
     if (!is_home()) {
         if (is_category() || is_single()) {
             echo '<li>';
-            the_category(' </li><li class="separator"> / </li><li> ');
+            echo get_post_type();
             if (is_single()) {
-                echo '</li><li class="separator"> / </li><li>';
+                echo '</li><li class="separator"> | </li><li>';
                 the_title();
                 echo '</li>';
             }

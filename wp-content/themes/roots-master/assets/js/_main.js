@@ -62,7 +62,9 @@ function openPortfolio() {
                     openPortfolio();
                 });
 
-                cbpBGSlideshow.init(1);
+                cbpBGSlideshow.init({
+                    delay: 5200
+                });
 
                 $(".boxer").boxer({
                     mobile: true
@@ -76,6 +78,17 @@ function openPortfolio() {
                 $(".navbar-toggle").on('click', function(e) {
                     $('.top-nav').find('.navbar-brand').toggleClass('invert');
                 });
+
+                $("#portfolio-thumbs a").first().addClass("current");
+                $("#portfolio-thumbs a").on("click", function(e){
+                    e.preventDefault();
+                    $("#portfolio-thumbs a.current").removeClass("current");
+                    $(this).addClass("current");
+
+                    var id = $(this).attr("id").split("-")[1];
+                    $("#cbp-bislideshow li.current").removeClass("current");
+                    $("#cbp-bislideshow li#slide-"+id).addClass("current");
+                });
             }
         },
         // Home page
@@ -83,20 +96,6 @@ function openPortfolio() {
             init: function() {
 
                 $slideshow = $('#cbp-bislideshow');
-
-                // $plauseBtn = $("#cbp-bipause");
-                // $slideshow.imagesLoaded(function() {
-                //     console.log('images loaded');
-                //     $plauseBtn.trigger("click");
-                //     setTimeout(function() {
-                //         $plauseBtn.trigger("click");
-                //         console.log('time up');
-                //     }, 5100);
-                // });
-
-                // $plauseBtn.on('click', function() {
-                //     console.log('clicked');
-                // });
 
 
                 $slideshow.imagesLoaded(function() {

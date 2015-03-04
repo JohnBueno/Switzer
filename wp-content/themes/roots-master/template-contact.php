@@ -44,12 +44,16 @@ Template Name: Contact Template
         <br>
         <?php if ($maplink = get_field('google_maps_link')): ?>
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-7">
                     <a target="_blank" href="<?php the_field('google_maps_link'); ?>">
                         <i class="fa fa-caret-right"></i>
                         Map & Directions via Google Maps
                     </a>
-                    
+                </div>
+                <div class="col-sm-5 social text-right">
+                    <a href=""><i class="fa fa-linkedin-square"></i></a>
+                    <a href=""><i class="fa fa-facebook-square"></i></a>
+                    <a href=""><i class="fa fa-twitter-square"></i></a>
                 </div>
             </div>
         <?php endif; ?>

@@ -43,14 +43,17 @@ var cbpBGSlideshow = (function() {
                 // for older browsers add fallback here (image size and centering)
             }
             // show first item
-            $items.eq(current).css('opacity', 1);
+            // $items.eq(current).css('opacity', 1);
+            $items.first().addClass('current');
             // initialize/bind the events
             initEvents();
-            setTimeout(function() {
-                console.log('time up');
-                // start the slideshow
-                startSlideshow();
-            }, 5100);
+
+            if (!$slideshow.hasClass("no-autoplay")) {
+                setTimeout(function() {
+                    startSlideshow();
+                }, config.delay);
+            };
+
 
 
         });
@@ -88,7 +91,6 @@ var cbpBGSlideshow = (function() {
     }
 
     function navigate(direction) {
-
         // current item
         var $oldItem = $items.eq(current);
 
@@ -101,8 +103,10 @@ var cbpBGSlideshow = (function() {
         // new item
         var $newItem = $items.eq(current);
         // show / hide items
-        $oldItem.css('opacity', 0);
-        $newItem.css('opacity', 1);
+        //$oldItem.css('opacity', 0);
+        $oldItem.removeClass("current");
+        //$newItem.css('opacity', 1);
+        $newItem.addClass("current");
 
     }
 
@@ -123,7 +127,7 @@ var cbpBGSlideshow = (function() {
     }
 
     return {
-        init: init
+        init: init,
     };
 
 })();

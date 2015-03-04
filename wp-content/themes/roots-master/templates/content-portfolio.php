@@ -1,6 +1,7 @@
 <?php 
  	//$blanks = [1, 3, 8];
-    $blanks = array(1, 3, 8);
+    //$blanks = array(1, 3, 8);
+    $blanks = array();
     $args = array(
 		'type' => 'portfolio',
 		'exclude' => 1
@@ -24,7 +25,7 @@
                         <?php if ($image = get_field('category_image', $c->taxonomy . '_' . $c->term_id)): ?>
                             <img class="img-responsive" src="<?php echo($image['sizes']['portfolio-thumbail']); ?>" alt="<?php the_title(); ?>">
                         <?php else: ?>              
-                            <img class="img-responsive" src="<?php bloginfo('template_url') ?>/assets/img/category-title-bg.gif" alt="">
+                            <img class="img-responsive" src="<?php bloginfo('template_url') ?>/assets/img/blank.gif" alt="">
                         <?php endif; ?>
 
                         <h4><?php echo($c->name); ?></h4>

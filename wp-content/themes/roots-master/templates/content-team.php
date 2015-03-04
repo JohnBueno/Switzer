@@ -22,7 +22,7 @@
                 $image = get_field('headshot');
             ?>
 
-            <div class="col-md-3 headshot headshot-<?php echo($i); ?>"> 
+            <div class="col-md-3 col-sm-3 headshot headshot-<?php echo($i); ?>"> 
                 <div class="bg">
                     <a href="<? the_permalink(); ?>">
                     <img class="img-responsive" src="<?php echo($image['sizes']['team']); ?>" alt="<?php the_title(); ?>">
