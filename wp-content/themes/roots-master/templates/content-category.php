@@ -29,10 +29,10 @@
 					$query->the_post();
 		?>						
 
-
 		<div class="col-md-3 col-sm-4">
 			<div class="bg">
-				<a href="<?php the_permalink(); ?>">
+                <?php if($this_category->slug != "branding"): ?>
+                <a href="<?php the_permalink(); ?>">
 					<?php if ($image = get_field('thumb')): ?>
 						<img class="img-responsive" src="<?php echo($image['sizes']['portfolio-thumbail']); ?>" alt="<?php the_title(); ?>">
 					<?php else: ?>				
@@ -40,6 +40,15 @@
 					<?php endif; ?>
 					<h4><?php the_title(); ?></h4>
 				</a>
+
+                <?php else: ?>
+                
+                    <?php if ($image = get_field('thumb')): ?>
+                        <img class="img-responsive" src="<?php echo($image['sizes']['portfolio-thumbail']); ?>" alt="<?php the_title(); ?>">
+                    <?php else: ?>              
+                        <img class="img-responsive" src="<?php bloginfo('template_url') ?>/assets/img/blank.gif" alt="">
+                    <?php endif; ?>
+                <?php endif; ?>
 			</div>
 		</div>
 

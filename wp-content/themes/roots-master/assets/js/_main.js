@@ -40,6 +40,18 @@ function openPortfolio() {
             init: function() {
                 // JavaScript to be fired on all pages
                 // ADD SLIDEDOWN ANIMATION TO DROPDOWN //
+                
+                var pageHeadHeight = $(".page-header").height();
+                var footerHeight = $(".content-info").height(); 
+                var bodyHeight = $("body").height();
+                console.log(pageHeadHeight);
+                console.log(footerHeight);
+                console.log(bodyHeight);
+
+                var minHeight = bodyHeight - pageHeadHeight - footerHeight;
+                $(".min-height").css("min-height", minHeight);
+
+                 
                 $('.dropdown').on('show.bs.dropdown', function(e) {
                     $(this).find('.dropdown-menu').first().fadeIn();
                 });

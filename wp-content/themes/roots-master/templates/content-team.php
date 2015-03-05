@@ -23,6 +23,7 @@
             ?>
 
             <div class="col-md-3 col-sm-3 headshot headshot-<?php echo($i); ?>"> 
+            <?php if($i!=10): ?>
                 <div class="bg">
                     <a href="<? the_permalink(); ?>">
                     <img class="img-responsive" src="<?php echo($image['sizes']['team']); ?>" alt="<?php the_title(); ?>">
@@ -32,6 +33,11 @@
                     </span>
                     </a>
                 </div>
+            <?php else: ?>
+                            <img class="img-responsive" src="<?php bloginfo('template_url') ?>/assets/img/blank-team.gif" alt="">
+            <?php endif; ?>
+
+
             </div>
             <?php
             $i++;

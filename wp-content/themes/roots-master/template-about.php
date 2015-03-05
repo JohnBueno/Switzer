@@ -25,7 +25,7 @@ Template Name: About Template
     <div class="row mobile-img">
         <img  class="img-responsive" src="<?php echo($slides[0]['slide']['sizes']['large']); ?>" alt="<?php the_title(); ?>">
     </div>
-    <div class="col-md-5 col-md-offset-6 col-sm-offset-6 col-sm-6 white-bg">
+    <div class="col-md-5 col-md-offset-6 col-sm-offset-6 col-sm-6 white-bg min-height">
         <div class="extra-pad">
             <?php get_template_part('templates/content', 'about'); ?>
         </div>

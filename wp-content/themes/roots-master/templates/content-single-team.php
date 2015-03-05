@@ -9,7 +9,7 @@
 </ul>
 <div class="shadow"></div>
 
-<div class="col-md-6 col-md-offset-5 col-sm-offset-6 col-sm-6 white-bg">
+<div class="col-md-6 col-md-offset-5 col-sm-offset-6 col-sm-6 white-bg min-height">
     <?php while (have_posts()) : the_post(); ?>
         <article <?php post_class(); ?>>
             <div class="row">

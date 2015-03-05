@@ -18,7 +18,7 @@
         <img  class="img-responsive" src="<?php echo($slides[0]['slide']['sizes']['large']); ?>" alt="<?php the_title(); ?>">
     </div>
     
-    <div class="col-md-5 col-md-offset-6 col-sm-offset-6 col-sm-6 page white-bg">
+    <div class="col-md-5 col-md-offset-6 col-sm-offset-6 col-sm-6 page white-bg min-height">
         <div class="extra-pad">
   		    <?php get_template_part('templates/content', 'page'); ?>
         </div>
