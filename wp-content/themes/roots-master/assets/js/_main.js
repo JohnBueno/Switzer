@@ -44,11 +44,8 @@ function openPortfolio() {
                 var pageHeadHeight = $(".page-header").height();
                 var footerHeight = $(".content-info").height(); 
                 var bodyHeight = $("body").height();
-                console.log(pageHeadHeight);
-                console.log(footerHeight);
-                console.log(bodyHeight);
-
-                var minHeight = bodyHeight - pageHeadHeight - footerHeight;
+                var fixedHdrHeight = $(".header-fixed").height();
+                var minHeight = bodyHeight - pageHeadHeight - footerHeight - fixedHdrHeight;
                 $(".min-height").css("min-height", minHeight);
 
                  

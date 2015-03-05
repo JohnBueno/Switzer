@@ -9,7 +9,7 @@
  	$categories = get_categories($args);
     $i = 0;
 ?>
-<div class="col-md-12 category-thumbs">
+<div class="col-md-12 category-thumbs min-height">
 	<div class="row">
 		<?php foreach ($categories as $c): ?>
 

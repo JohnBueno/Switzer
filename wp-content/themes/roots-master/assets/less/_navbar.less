@@ -12,6 +12,7 @@ html, body{
 	position: absolute;
 	left: 10px;
 	top: 15px;
+	z-index: 1000;
 }
 
 .hide-overflow{
@@ -69,7 +70,7 @@ html, body{
 	z-index: 10;
 	position: absolute;
 	right: 25px;
-	top: 30px;
+	top: 36px;
 	font-size: @font-size-large;
 	color: @brand-primary;
 	&:hover{
@@ -156,7 +157,7 @@ html, body{
 
 .header-fixed{
 	top: 0;
-	position:relative; 
+	position:absolute; 
 	width:100%;
 	left: 0;
 	background: #000;
@@ -166,7 +167,6 @@ html, body{
 @media (min-width: @screen-sm-min)  {
 
 	.header-fixed{
-		position:fixed;
 		z-index: 5; 
 		.col-md-offset-6{
 			//background: @gray-light;
@@ -200,12 +200,9 @@ html, body{
 	.side-nav{
 		width: 50%;
 	}
+
 	.open.side-nav{
 		left: 50%;
-	}
-	.portfolio .top-nav,
-	.category .top-nav{
-		display: block;
 	}
 
 	.top-nav .navbar{
@@ -303,6 +300,9 @@ html, body{
 
 @media (min-width: @screen-md-min)  {
 	
+	.header-fixed{
+		position: fixed;
+	}
 	.header-fixed .col-md-offset-6{
 		background: transparent;
 	}

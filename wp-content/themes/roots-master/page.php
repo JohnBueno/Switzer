@@ -9,7 +9,7 @@
 <div class="shadow"></div>
 
 <?php while (have_posts()) : the_post(); ?>
-    <div class="col-md-5 col-md-offset-6 col-sm-offset-6 col-sm-6 page white-bg">
+    <div class="col-md-5 col-md-offset-6 col-sm-offset-6 col-sm-12 page white-bg">
         <div class="extra-pad">
   		    <?php get_template_part('templates/page', 'header'); ?>
         </div>

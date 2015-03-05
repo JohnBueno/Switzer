@@ -12,7 +12,7 @@
 	?>
 
     <div class="col-xs-12">
-        <div class="row team-imgs">
+        <div class="row team-imgs min-height">
             <?php 
                 // The Loop
                 $i = 1;
