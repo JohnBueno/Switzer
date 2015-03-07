@@ -21,7 +21,12 @@
 			<div class="col-md-3 col-sm-4">
 				
 				<div class="bg">
-					<a href="<?php echo(get_category_link($c->cat_ID)); ?>">
+                    <?php 
+                        if(!$link = get_field('redirect_to_page', $c->taxonomy . '_' . $c->term_id)){
+                            $link = get_category_link($c->cat_ID);
+                        }
+                    ?>
+					<a href="<?php echo($link); ?>">
                         <?php if ($image = get_field('category_image', $c->taxonomy . '_' . $c->term_id)): ?>
                             <img class="img-responsive" src="<?php echo($image['sizes']['portfolio-thumbail']); ?>" alt="<?php the_title(); ?>">
                         <?php else: ?>              

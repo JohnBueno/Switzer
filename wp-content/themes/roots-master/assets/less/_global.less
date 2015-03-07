@@ -17,6 +17,10 @@ h5{
 	text-transform: uppercase;
 }
 
+.blank{
+	display: none;
+}
+
 .content ul{
 	padding-left: 15px;
 	font-size: @font-size-small;
@@ -233,10 +237,6 @@ a:focus{
 	}
 }
 
-.category-thumbs .blank{
-	display: none;
-}
-
 .extra-pad{
 	padding: 10px;
 
@@ -302,6 +302,10 @@ footer{
 
 }
 @media (min-width: @screen-md-min)  {
+	
+	.blank{
+		display: block;
+	}
 	
 	.wrap{
 		width: @container-md;
