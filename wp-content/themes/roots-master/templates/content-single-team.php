@@ -13,7 +13,7 @@
     <?php while (have_posts()) : the_post(); ?>
         <article <?php post_class(); ?>>
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-12 hidden-xs">
                     <div class="extra-pad">
                         <a class="team-back pull-right btn-close" href="<?php bloginfo('url'); ?>/about/meet-our-team">
                             <img src="<?php bloginfo('template_url'); ?>/assets/img/btn-close.png" alt="close">

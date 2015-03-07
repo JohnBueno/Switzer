@@ -10,7 +10,7 @@ html, body{
 .navbar-brand{
 	max-width: 250px;
 	position: absolute;
-	left: 25px;
+	left: 10px;
 	top: 15px;
 	z-index: 1000;
 }
@@ -69,7 +69,7 @@ html, body{
 .open-sidenav{
 	z-index: 10;
 	position: absolute;
-	right: 42px;
+	right: 25px;
 	top: 36px;
 	font-size: @font-size-large;
 	color: @brand-primary;
@@ -168,6 +168,14 @@ html, body{
 
 @media (min-width: @screen-sm-min)  {
 
+	.navbar-brand{
+		left: 25px;
+		top: 15px;
+	}
+
+	.open-sidenav{
+		right: 42px;
+	}
 	.header-fixed{
 		z-index: 5;
 		position: absolute; 

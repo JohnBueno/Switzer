@@ -7,7 +7,12 @@
                     <li class="separator"> | </li>
                     <li>MEET OUR LEADERSHIP</li>
                 </ul>
+                <a class="pull-right btn-close visible-xs" href="<?php bloginfo('url'); ?>/about/meet-our-team">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/img/btn-close.png" alt="close">
+                </a>
             </div>
+
+            
             
         </div>  
     
