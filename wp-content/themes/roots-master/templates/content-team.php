@@ -15,15 +15,15 @@
         <div class="row team-imgs min-height">
             <?php 
                 // The Loop
-                $i = 1;
+                
                 if ( $query->have_posts() ):
                     while ( $query->have_posts() ):
                     $query->the_post();
-                $image = get_field('headshot');
+                    $image = get_field('headshot');
             ?>
 
             <div class="col-md-3 col-sm-3 col-xs-6 headshot headshot-<?php echo($i); ?>"> 
-            <?php if($i!=10): ?>
+            
                 <div class="bg">
                     <a href="<? the_permalink(); ?>">
                     <img class="img-responsive" src="<?php echo($image['sizes']['team']); ?>" alt="<?php the_title(); ?>">
@@ -33,14 +33,23 @@
                     </span>
                     </a>
                 </div>
-            <?php else: ?>
-                            <img class="img-responsive" src="<?php bloginfo('template_url') ?>/assets/img/blank-team.gif" alt="">
-            <?php endif; ?>
-
 
             </div>
+            <?php 
+                if(get_field("placeholder")): 
+                for ($x = 0; $x < get_field("number_of_placeholders"); $x++):
+            ?>
+                <div class="col-md-3 col-sm-3 col-xs-6 headshot blank"> 
+                    <img class="img-responsive" src="<?php bloginfo('template_url') ?>/assets/img/blank-team.gif" alt="">
+                </div>
+                
+            <?php 
+                endfor;
+                endif; 
+            ?>
+            
+
             <?php
-            $i++;
                     endwhile;
                 endif;
                 // Restore original Post Data

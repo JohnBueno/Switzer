@@ -6,7 +6,7 @@
 	<div class="header-fixed">
 	    
 	        <div class="row">
-	            <div class="col-md-6 col-sm-6 thumbs" id="portfolio-thumbs">
+	            <div class="col-md-6 col-sm-6 thumbs col-xs-12" id="portfolio-thumbs">
                     <?php foreach ($slides as $slide): ?>                    
                     <div class="col-xs-1">
 	                    <a id="thumb-<?php echo($slide['slide']['id']); ?>" href="#">
@@ -15,7 +15,7 @@
 	                </div>
 	                <?php endforeach;?>
 	            </div>
-	            <div class="col-md-6 col-sm-6">
+	            <div class="col-md-6 col-sm-6 col-xs-12">
 	                <div class="page-header">
 	                    <div class="breadcrumbs">
 	                        <ul id="breadcrumbs">
