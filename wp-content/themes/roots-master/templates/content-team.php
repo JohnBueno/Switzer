@@ -22,7 +22,7 @@
                 $image = get_field('headshot');
             ?>
 
-            <div class="col-md-3 col-sm-3 headshot headshot-<?php echo($i); ?>"> 
+            <div class="col-md-3 col-sm-3 col-xs-6 headshot headshot-<?php echo($i); ?>"> 
             <?php if($i!=10): ?>
                 <div class="bg">
                     <a href="<? the_permalink(); ?>">

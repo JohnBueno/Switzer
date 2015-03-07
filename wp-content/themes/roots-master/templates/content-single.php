@@ -4,10 +4,10 @@
     ?>
     
 	<div class="header-fixed">
-	    <div class="container">
+	    
 	        <div class="row">
 	            <div class="col-md-6 col-sm-6 thumbs" id="portfolio-thumbs">
-	                <?php foreach ($slides as $slide): ?>                    
+                    <?php foreach ($slides as $slide): ?>                    
                     <div class="col-xs-1">
 	                    <a id="thumb-<?php echo($slide['slide']['id']); ?>" href="#">
 	                        <img class="img-responsive" src="<?php echo ($slide['slide']['sizes']['thumbnail']);?>"/>
@@ -15,7 +15,7 @@
 	                </div>
 	                <?php endforeach;?>
 	            </div>
-	            <div class="col-md-6 col-md-offset-6 col-sm-6">
+	            <div class="col-md-6 col-sm-6">
 	                <div class="page-header">
 	                    <div class="breadcrumbs">
 	                        <ul id="breadcrumbs">
@@ -26,7 +26,7 @@
 	                </div>
 	            </div>
 	        </div>
-	    </div>
+	    
 	</div>
 
 	<ul id="cbp-bislideshow" class="cbp-bislideshow no-autoplay">

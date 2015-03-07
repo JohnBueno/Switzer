@@ -29,7 +29,8 @@
     <div class="container">
         <div class="row">
             <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
-                <img class="img-responsive" src="<?php bloginfo('template_url'); ?>/assets/img/hdr-logo.png" alt="<?php bloginfo('name'); ?>">
+                <img class="img-responsive hidden-sm" src="<?php bloginfo('template_url'); ?>/assets/img/hdr-logo-dark.png" alt="<?php bloginfo('name'); ?>">
+                <img class="img-responsive visible-sm" src="<?php bloginfo('template_url'); ?>/assets/img/hdr-logo.png" alt="<?php bloginfo('name'); ?>">
             </a>
             <a class="open-sidenav toggle-sidenav" href="#">
                 <i class="fa fa-bars"></i>
