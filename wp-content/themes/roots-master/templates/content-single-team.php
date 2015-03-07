@@ -31,8 +31,8 @@
                                 <img class="img-responsive" src="<?php echo($image['sizes']['large']); ?>" alt="<?php the_title(); ?>">
                             </div>
                         <?php endif; ?> 
-                        <div class="col-sm-6">
-                            <h4 class="entry-title"><?php the_title(); ?></h4>
+                        <div class="col-sm-6 name">
+                            <h4 class="entry-title cap"><?php the_title(); ?></h4>
                             <h5><?php the_field('job_title'); ?></h5>
                         </div>
                         </div>
