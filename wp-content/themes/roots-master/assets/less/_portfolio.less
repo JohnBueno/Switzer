@@ -4,8 +4,18 @@ body.portfolio, body.category{
 
 .mobile-portfolio{
 	position: relative;
+	background: #000;
 }
 
+.mobile-portfolio .mobile-img{
+	.opacity(0);
+	.transition(opacity 2.0s ease);
+	display: none;
+}
+.mobile-portfolio .current{
+	.opacity(1);
+	display: block;
+}
 
 .portfolio-categories .category-thumbs{
 	margin-top: 20px;
@@ -52,11 +62,12 @@ body.portfolio, body.category{
 	margin-bottom: 0;
 }
 
+.single-portfolio .header-fixed{
+	padding: 25px;
+}
 .single-portfolio .thumbs{
 	position: relative;
-	left: 37px;
-	margin-top: 90px;
-	margin-bottom: 20px;
+	
 	.col-xs-1{
 		padding-right: 5px;
 		padding-left: 5px;
@@ -87,6 +98,10 @@ body.portfolio, body.category{
 	}
 
 }
+.single-portfolio h4{
+	color: #fff;
+	margin-bottom: 3px;
+}
 .single-portfolio h5{
 	color: #000;
 	margin-bottom: 3px;
@@ -98,10 +113,22 @@ body.portfolio, body.category{
 
 @media (min-width: @screen-sm-min)  {
 
+	.single-portfolio .header-fixed{
+		padding: 0px;
+	}
+	.single-portfolio .thumbs{
+		left: 37px;
+		margin-top: 90px;
+		margin-bottom: 20px;	
+	}
+
 	body.portfolio, body.category{
 		background-color: #fff;
 	}	
 
+	.mobile-portfolio{
+		display: none;
+	}
 
 	.portfolio-categories .col-md-3{ 
 		max-width: none;

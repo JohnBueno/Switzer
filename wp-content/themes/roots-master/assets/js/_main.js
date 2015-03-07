@@ -89,14 +89,15 @@ function openPortfolio() {
                 });
 
                 $("#portfolio-thumbs a").first().addClass("current");
+                $(".mobile-portfolio .mobile-img").first().addClass("current");
                 $("#portfolio-thumbs a").on("click", function(e){
                     e.preventDefault();
                     $("#portfolio-thumbs a.current").removeClass("current");
                     $(this).addClass("current");
 
                     var id = $(this).attr("id").split("-")[1];
-                    $("#cbp-bislideshow li.current").removeClass("current");
-                    $("#cbp-bislideshow li#slide-"+id).addClass("current");
+                    $("#cbp-bislideshow li.current, .mobile-portfolio .current").removeClass("current");
+                    $("#cbp-bislideshow li#slide-"+ id +", .mobile-portfolio #slide-"+ id).addClass("current");
                 });
             }
         },
