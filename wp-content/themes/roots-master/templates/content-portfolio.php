@@ -7,17 +7,13 @@
 		'exclude' => 1
 	);
  	$categories = get_categories($args);
+    $count = count($categories);
     $i = 0;
 ?>
-<div class="col-md-12 category-thumbs min-height">
-	<div class="row">
-		<?php foreach ($categories as $c): ?>
 
-            <?php if(in_array($i, $blanks)): ?>
-                <div class="col-md-3 col-sm-4 blank">
-                    <img class="img-responsive" src="<?php bloginfo('template_url') ?>/assets/img/blank.gif" alt="">
-                </div>
-            <?php endif; ?>			
+<div class="col-md-12 category-thumbs min-height">
+    <div class="row">
+		<?php foreach ($categories as $c): ?>		
 			<div class="col-md-3 col-sm-4">
 				
 				<div class="bg">
@@ -40,5 +36,21 @@
 		<?php 
         $i++;
         endforeach; ?>
+
+        <?php 
+            $roundUp = roundUpToAny($count, 4);
+            $blanks = $roundUp - $count;
+            
+            if (($blanks + $count) < 8) {
+                $blanks = $blanks +4;
+            }
+            for ($x = 0; $x < $blanks; $x++):
+        ?>
+            <div class="col-md-3 col-sm-4 blank">
+                <img class="img-responsive" src="<?php bloginfo('template_url') ?>/assets/img/blank.gif" alt="">
+            </div>
+        <?php
+            endfor; 
+        ?>
 	</div>	
 </div>

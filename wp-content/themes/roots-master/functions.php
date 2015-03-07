@@ -78,4 +78,8 @@ function the_breadcrumb() {
     echo '</ul>';
 }
 
+function roundUpToAny($n,$x=4) {
+    return (round($n)%$x === 0) ? round($n) : round(($n+$x/2)/$x)*$x;
+}
+
 
