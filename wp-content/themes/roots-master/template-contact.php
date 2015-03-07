@@ -51,9 +51,7 @@ Template Name: Contact Template
                     </a>
                 </div>
                 <div class="col-sm-5 social text-right">
-                    <a href=""><i class="fa fa-linkedin-square"></i></a>
-                    <a href=""><i class="fa fa-facebook-square"></i></a>
-                    <a href=""><i class="fa fa-twitter-square"></i></a>
+                    <a href="https://www.linkedin.com/company/the-switzer-group"><i class="fa fa-linkedin-square"></i></a>
                 </div>
             </div>
         <?php endif; ?>
