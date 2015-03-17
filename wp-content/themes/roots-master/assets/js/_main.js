@@ -30,6 +30,27 @@ function openPortfolio() {
     }
 }
 
+function setMinHeight() {
+
+    var pageHeadHeight = 0;
+    var fixedHdrHeight = 0;
+    var footerHeight = $(".content-info").height();
+    var windowHeight = $(window).height();
+    var topMargin = 0;
+    var extra = 0;
+    if ($('.header-fixed').is(':visible')) {
+        fixedHdrHeight = $(".header-fixed").height();
+        topMargin = parseInt($(".min-height").css("margin-top"));
+        extra = 50;
+    }else{
+        pageHeadHeight = $(".page-header").height();
+        extra = 130;
+    }
+
+    var minHeight = windowHeight - footerHeight - topMargin - pageHeadHeight - extra;
+    $(".min-height").css("min-height", minHeight);
+}
+
 (function($) {
 
     // Use this variable to set up the common and page specific functions. If you 
@@ -40,15 +61,14 @@ function openPortfolio() {
             init: function() {
                 // JavaScript to be fired on all pages
                 // ADD SLIDEDOWN ANIMATION TO DROPDOWN //
-                
-                var pageHeadHeight = $(".page-header").height();
-                var footerHeight = $(".content-info").height(); 
-                var bodyHeight = $("body").height();
-                var fixedHdrHeight = $(".header-fixed").height();
-                var minHeight = bodyHeight - pageHeadHeight - footerHeight - fixedHdrHeight;
-                $(".min-height").css("min-height", minHeight);
 
-                 
+
+                setMinHeight();
+
+                $(window).resize(function() {
+                    setMinHeight();
+                });
+
                 $('.dropdown').on('show.bs.dropdown', function(e) {
                     $(this).find('.dropdown-menu').first().fadeIn();
                 });
@@ -90,14 +110,14 @@ function openPortfolio() {
 
                 $("#portfolio-thumbs a").first().addClass("current");
                 $(".mobile-portfolio .mobile-img").first().addClass("current");
-                $("#portfolio-thumbs a").on("click", function(e){
+                $("#portfolio-thumbs a").on("click", function(e) {
                     e.preventDefault();
                     $("#portfolio-thumbs a.current").removeClass("current");
                     $(this).addClass("current");
 
                     var id = $(this).attr("id").split("-")[1];
                     $("#cbp-bislideshow li.current, .mobile-portfolio .current").removeClass("current");
-                    $("#cbp-bislideshow li#slide-"+ id +", .mobile-portfolio #slide-"+ id).addClass("current");
+                    $("#cbp-bislideshow li#slide-" + id + ", .mobile-portfolio #slide-" + id).addClass("current");
                 });
             }
         },

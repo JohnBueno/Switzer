@@ -1,5 +1,5 @@
 
-<div class="col-md-12 category-thumbs">
+<div class="col-md-12 category-thumbs min-height">
 
 	<div class="row">
 		<div class="col-md-3 col-sm-4 category-title">
@@ -56,8 +56,8 @@
             $roundUp = roundUpToAny($count, 4);
             $blanks = $roundUp - $count;
             
-            if (($blanks + $count) < 8) {
-                $blanks = $blanks +4;
+            if (($blanks + $count) < 12) {
+                $blanks = 12 - $count;
             }
 
             for ($x = 0; $x < $blanks; $x++):

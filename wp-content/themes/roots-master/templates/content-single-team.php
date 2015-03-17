@@ -9,9 +9,9 @@
 </ul>
 <div class="shadow"></div>
 
-<div class="col-md-6 col-md-offset-5 col-sm-12 white-bg min-height team-single">
+<div class="col-md-6 col-md-offset-5 col-sm-12 white-bg team-single">
     <?php while (have_posts()) : the_post(); ?>
-        <article <?php post_class(); ?>>
+        <article <?php post_class('min-height'); ?>>
             <div class="row">
                 <div class="col-sm-12 hidden-xs">
                     <div class="extra-pad">
@@ -27,11 +27,11 @@
                     <div class="row">
                         <div class="extra-pad">
                             <?php if($image = get_field('headshot')): ?>
-                            <div class="col-sm-6">
+                            <div class="col-xs-6">
                                 <img class="img-responsive" src="<?php echo($image['sizes']['large']); ?>" alt="<?php the_title(); ?>">
                             </div>
                         <?php endif; ?> 
-                        <div class="col-sm-6 name">
+                        <div class="col-xs-6 name">
                             <h4 class="entry-title cap"><?php the_title(); ?></h4>
                             <h5><?php the_field('job_title'); ?></h5>
                         </div>
