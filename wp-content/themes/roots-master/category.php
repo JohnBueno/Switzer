@@ -4,7 +4,7 @@
             <div class="page-header">
                 <div class="breadcrumbs">
                     <ul id="breadcrumbs">
-                        <li>Portfolio</li>
+                        <li><a class="white" href="<?php bloginfo('url'); ?>/portfolio">Portfolio</a></li>
                     </ul>
                 
                 </div>

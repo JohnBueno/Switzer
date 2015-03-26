@@ -2,6 +2,7 @@ body {
     font-family: @font-family-sans-serif;
     background-color: #fff;
 }
+
 h4, h5 {
     font-family: @font-family-sans-serif;
 }
@@ -9,6 +10,12 @@ h5 {
     color: #000;
     text-transform: uppercase;
     font-weight: 800;
+}
+a.white{
+    color: #fff !important;
+    &:hover{
+        color: @brand-primary !important;
+    }
 }
 .cap {
     text-transform: uppercase;
@@ -182,21 +189,7 @@ a:focus {
 .header-fixed h3 {
     color: #fff;
 }
-.category .bg h4 {
-    .opacity(1);
-    .transition(opacity 0.4s ease);
-}
-.category .category-title .bg h4 {
-    .opacity(1);
-}
-.portfolio-categories .col-md-3 {
-    .bg a:hover img {
-        .opacity(0.5);
-    }
-    .bg a:hover h4 {
-        .opacity(1);
-    }
-}
+
 .extra-pad {
     padding: 10px;
 }

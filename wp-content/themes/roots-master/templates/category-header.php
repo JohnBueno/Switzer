@@ -12,7 +12,7 @@
 		<div class="page-header">
 			<div class="breadcrumbs">
 		  		<ul id="breadcrumbs"><li>
-                <a href="<?php bloginfo('url'); ?>/portfolio">Portfolio</a>
+                	<a class="white" href="<?php bloginfo('url'); ?>/portfolio">Portfolio</a>
                 </li></ul>
 		  	</div>
 		  	

@@ -14,7 +14,7 @@
 <div class="col-md-12 category-thumbs min-height">
     <div class="row">
 		<?php foreach ($categories as $c): ?>		
-			<div class="col-md-3 col-sm-4">
+			<div class="col-md-3 col-sm-4 cat">
 				
 				<div class="bg">
                     <?php 

@@ -3,9 +3,9 @@
  * The base configurations of the WordPress.
  *
  * This file has the following configurations: MySQL settings, Table Prefix,
- * Secret Keys, WordPress Language, and ABSPATH. You can find more information
- * by visiting {@link http://codex.wordpress.org/Editing_wp-config.php Editing
- * wp-config.php} Codex page. You can get the MySQL settings from your web host.
+ * Secret Keys, and ABSPATH. You can find more information by visiting
+ * {@link http://codex.wordpress.org/Editing_wp-config.php Editing wp-config.php}
+ * Codex page. You can get the MySQL settings from your web host.
  *
  * This file is used by the wp-config.php creation script during the
  * installation. You don't have to use the web site, you can just copy this file
@@ -42,14 +42,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'v7t>%wS$?T(rD4$%xP`LVNNI((iya1|1j-vGX92^Xwb};>YWqj-?0$nx+Mu[(1b!');
-define('SECURE_AUTH_KEY',  'R2es5n%[vU>:Qe^,w-Y<5L[p+3yj$,qe%y|t.P,O_%PX42#`w|FYqxHGs0P@ <Ot');
-define('LOGGED_IN_KEY',    'Mef_vR=b3<k#^:gW.DuD3,K<}-E-:&?^d.N||_W{-%23fRWzysoVdfUknH2[^B2S');
-define('NONCE_KEY',        'w~ZDGh!4>B|_.Y^3&W+t6zCb=;kKz?@-BqjK5H3dqjG^nsD6s+.P4+xZ&UO:b^9[');
-define('AUTH_SALT',        '+-zkJo.ktay`T-f>:$86U(C>Z4dLp!}EZ-PX>dGqw]ma#@-7psP|o<i<.vOzi~*U');
-define('SECURE_AUTH_SALT', 'H-x#ok,TCK-F+X0Kg8H1-x%VyObpk?j!?Rz55J0+x$m+&x%b3MfLI#B_2_BW4aND');
-define('LOGGED_IN_SALT',   'X3=[3+_L] >{pfl%CrzC+$a!AY5dlB5U-[8De`[Z9JB<|4R3jZQ%}8QI)-(De*pr');
-define('NONCE_SALT',       '1G^*dgPLbR) 53LyKKYT/Wa(z/$G6${43T!%}T.V|NTx64`W,w/Zs.8vXiX3%s|8');
+define('AUTH_KEY',         'YxqVJr6GmK?R^mq=7};[?3TN@;k.^_y+]]+gy_|Mu]Z`9 <(os.f3igVm{+)A%9R');
+define('SECURE_AUTH_KEY',  'Au;dL$8f&SmRQq)}%f1A3sn-ICi;T+,.;{-?TVmD*?]Mw|4N+o%.SGA9R61,XCnj');
+define('LOGGED_IN_KEY',    'v++rkb>so4d$BTI5(Y;gI+Y5Smtg$8 hAp(H~u t?)4a}q]03;Tjb, NHr|[b&GY');
+define('NONCE_KEY',        '+bd}&-Y9JcFo(exnWPas`rCvmPmYgy:$a0nvYG5S8vK=~|$8#DQR+a6_?1yGfb/:');
+define('AUTH_SALT',        'd#i7KvyK?JXhT8m,fOG><03cd9UzXOE}j3m|PxL`hT9(wWe>g v!Oa9,jRVsD` G');
+define('SECURE_AUTH_SALT', '8-0F{DO;ufqoPr5baUY 2=1A2}8P9?=S|[7k+.2v%N{6;MGkR6r|ac4}vEk2g4#.');
+define('LOGGED_IN_SALT',   'OA>k#nYLv^SL-_Vs6I{Baq2}:3pzYz2@c$-Bm>Nd*TY{@@Kwh_yTX?BL& u`D3xt');
+define('NONCE_SALT',       'j:mevel`(p]3w]z-6Ug0 Z<K;qIDf&(2;saeJ}?1,z#BFdOc%E4W}MlG&hAB)>14');
 define('WP_ENV', 'development');
 
 /**#@-*/

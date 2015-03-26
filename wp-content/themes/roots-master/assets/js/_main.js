@@ -110,6 +110,15 @@ function setMinHeight() {
 
                 $("#portfolio-thumbs a").first().addClass("current");
                 $(".mobile-portfolio .mobile-img").first().addClass("current");
+
+                $( ".mobile-img" ).on( "swipeleft", function(e){
+                    alert("left");
+                });
+
+                $( ".mobile-img" ).on( "swiperight", function(e){
+                    alert("right");
+                });
+
                 $("#portfolio-thumbs a").on("click", function(e) {
                     e.preventDefault();
                     $("#portfolio-thumbs a.current").removeClass("current");

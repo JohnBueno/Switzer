@@ -8,7 +8,7 @@
 	        <div class="row">
 	            <div class="col-xs-12 visible-xs">
                     
-                    <h4>PORTFOLIO</h4>
+                    <h4><a class="white" href="<?php bloginfo('url'); ?>/portfolio">PORTFOLIO</a></h4>
                     <h3><?php the_title();?></h3>
                     
                 </div>
@@ -25,7 +25,7 @@
 	                <div class="page-header">
 	                    <div class="breadcrumbs">
 	                        <ul id="breadcrumbs">
-	                            <li>PORTFOLIO</li>
+	                            <li><a class="white" href="<?php bloginfo('url'); ?>/portfolio">PORTFOLIO</a></li>
 	                        </ul>
 	                    </div>
 	                    <h3><?php the_title();?></h3>

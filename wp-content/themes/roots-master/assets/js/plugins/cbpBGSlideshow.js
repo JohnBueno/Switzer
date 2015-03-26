@@ -54,10 +54,25 @@ var cbpBGSlideshow = (function() {
                 }, config.delay);
             };
 
+            var li;
+            var width;
+            var height;
+            for (var i = $items.length - 1; i >= 0; i--) {
+                li = $($items[i]);
+                width = li.find("img").width();
+                height = li.find("img").height();
+                
+                if (height > width) {
+                    li.addClass("vertical")
+                }else{
+                    li.addClass("horizontal")
+                };
+                
+            };
 
 
         });
-
+    
     }
 
     function initEvents() {

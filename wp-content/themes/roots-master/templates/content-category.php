@@ -5,7 +5,14 @@
 		<div class="col-md-3 col-sm-4 category-title">
             <div class="bg">
 			<img class="img-responsive" src="<?php bloginfo('template_url') ?>/assets/img/blank.gif" alt="<?php echo roots_title(); ?>">
-			<h4><?php echo roots_title(); ?></h4>
+			<div class="middle">
+				<div>
+					<h4>
+						<?php echo roots_title(); ?>
+					</h4>
+				</div>
+			</div>
+			
             </div>
 		</div>
 
@@ -30,7 +37,7 @@
 					$query->the_post();
 		?>						
 
-		<div class="col-md-3 col-sm-4">
+		<div class="col-md-3 col-sm-4 cat">
 			<div class="bg">
                 
                 <?php if(!get_field('disable_thumbnail_link')): ?><a href="<?php the_permalink(); ?>"><?php endif; ?>
